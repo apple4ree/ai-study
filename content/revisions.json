@@ -36,6 +36,27 @@
       "notes": "Substantive expansion prepared and locally validated on branch content/2026-11-16-0600 (9 tests passed). Main chapter and live Pages still use previous text. Continue the existing draft; do not restart these chapters. Required Chrome upload session unavailable.",
       "preparedBranch": "content/2026-11-16-0600",
       "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
+    },
+    "M05": {
+      "status": "prepared-in-draft-pr-not-deployed",
+      "structuredSections": 8,
+      "notes": "Expanded definitions, assumptions, numeric/code examples, comparisons, computational costs, counterexamples and solved checks; original H2 order and prose preserved. Local build and 10 tests passed, including immutable published H2 contract. Not deployed; required Chrome upload session remains unavailable.",
+      "preparedBranch": "content/2026-11-16-0600",
+      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
+    },
+    "L01": {
+      "status": "prepared-in-draft-pr-not-deployed",
+      "structuredSections": 6,
+      "notes": "Expanded definitions, assumptions, numeric/code examples, comparisons, computational costs, counterexamples and solved checks; original H2 order and prose preserved. Local build and 10 tests passed, including immutable published H2 contract. Not deployed; required Chrome upload session remains unavailable.",
+      "preparedBranch": "content/2026-11-16-0600",
+      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
+    },
+    "L02": {
+      "status": "prepared-in-draft-pr-not-deployed",
+      "structuredSections": 9,
+      "notes": "Expanded definitions, assumptions, numeric/code examples, comparisons, computational costs, counterexamples and solved checks; original H2 order and prose preserved. Local build and 10 tests passed, including immutable published H2 contract. Not deployed; required Chrome upload session remains unavailable.",
+      "preparedBranch": "content/2026-11-16-0600",
+      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
     }
   }
 }
