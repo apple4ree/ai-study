@@ -19,44 +19,66 @@
     "M03": {
       "status": "prepared-in-draft-pr-not-deployed",
       "structuredSections": 8,
-      "notes": "Substantive expansion prepared and locally validated on branch content/2026-11-16-0600 (9 tests passed). Main chapter and live Pages still use previous text. Continue the existing draft; do not restart these chapters. Required Chrome upload session unavailable.",
+      "notes": "Expanded derivative assumptions, chain rule, directional derivatives, matrix derivative shapes, reverse-mode costs and numerical integration examples. Original H2 order and prose preserved.",
       "preparedBranch": "content/2026-11-16-0600",
       "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
     },
     "M04": {
       "status": "prepared-in-draft-pr-not-deployed",
       "structuredSections": 8,
-      "notes": "Substantive expansion prepared and locally validated on branch content/2026-11-16-0600 (9 tests passed). Main chapter and live Pages still use previous text. Continue the existing draft; do not restart these chapters. Required Chrome upload session unavailable.",
+      "notes": "Expanded event relations, conditional probability, base-rate comparisons, density, moments, joint tables, dependence and limit-theorem examples. Original H2 order and prose preserved.",
       "preparedBranch": "content/2026-11-16-0600",
       "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
     },
     "C04": {
       "status": "prepared-in-draft-pr-not-deployed",
       "structuredSections": 7,
-      "notes": "Substantive expansion prepared and locally validated on branch content/2026-11-16-0600 (9 tests passed). Main chapter and live Pages still use previous text. Continue the existing draft; do not restart these chapters. Required Chrome upload session unavailable.",
+      "notes": "Expanded invariants, sorting tradeoffs, binary-search traces, sliding-window counterexamples, greedy conditions, dynamic programming and graph costs. Original H2 order and prose preserved.",
       "preparedBranch": "content/2026-11-16-0600",
       "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
     },
     "M05": {
       "status": "prepared-in-draft-pr-not-deployed",
       "structuredSections": 8,
-      "notes": "Expanded definitions, assumptions, numeric/code examples, comparisons, computational costs, counterexamples and solved checks; original H2 order and prose preserved. Local build and 10 tests passed, including immutable published H2 contract. Not deployed; required Chrome upload session remains unavailable.",
+      "notes": "Expanded estimation targets, bias/variance, likelihood boundaries, confidence intervals, paired comparison, resampling and multiple-testing calculations. Original H2 order and prose preserved.",
       "preparedBranch": "content/2026-11-16-0600",
       "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
     },
     "L01": {
       "status": "prepared-in-draft-pr-not-deployed",
       "structuredSections": 6,
-      "notes": "Expanded definitions, assumptions, numeric/code examples, comparisons, computational costs, counterexamples and solved checks; original H2 order and prose preserved. Local build and 10 tests passed, including immutable published H2 contract. Not deployed; required Chrome upload session remains unavailable.",
+      "notes": "Expanded prediction contracts, information availability, preprocessing state, deployment-specific splits, baselines and incomplete-label examples. Original H2 order and prose preserved.",
       "preparedBranch": "content/2026-11-16-0600",
       "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
     },
     "L02": {
       "status": "prepared-in-draft-pr-not-deployed",
       "structuredSections": 9,
-      "notes": "Expanded definitions, assumptions, numeric/code examples, comparisons, computational costs, counterexamples and solved checks; original H2 order and prose preserved. Local build and 10 tests passed, including immutable published H2 contract. Not deployed; required Chrome upload session remains unavailable.",
+      "notes": "Expanded model assumptions, regularization, decision costs, Naive Bayes, nearest-neighbor costs, tree impurity, ensembles and PCA. Original H2 order and prose preserved.",
       "preparedBranch": "content/2026-11-16-0600",
       "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
+    },
+    "M06": {
+      "status": "prepared-in-draft-pr-not-deployed",
+      "structuredSections": 8,
+      "preparedBranch": "content/2026-11-16-0600",
+      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1",
+      "notes": "Expanded regularized objectives, optimality counterexamples, convexity conclusions, learning-rate convergence, coordinate scaling, batch gradients, optimizer memory and constrained updates. Original H2 order and prose preserved."
+    },
+    "M07": {
+      "status": "prepared-in-draft-pr-not-deployed",
+      "structuredSections": 4,
+      "preparedBranch": "content/2026-11-16-0600",
+      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1",
+      "notes": "Expanded numerical precision, cancellation, finite-difference errors, conditioning, stable log probabilities, entropy, cross-entropy, KL, mutual information and perplexity. Existing H2 titles and numbered H3 topics preserved.",
+      "expandedTopics": 12
+    },
+    "L04": {
+      "status": "prepared-in-draft-pr-not-deployed",
+      "structuredSections": 8,
+      "preparedBranch": "content/2026-11-16-0600",
+      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1",
+      "notes": "Expanded MLP tensor shapes and costs, logits/loss contracts, matrix backpropagation, activation gradients, gradient accumulation, dropout expectations, execution modes and numerical checks. Original H2 order and prose preserved."
     }
   }
 }
