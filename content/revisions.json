@@ -15,6 +15,24 @@
       "status": "structured-expansion-pass-1",
       "structuredSections": 8,
       "notes": "Added concept/comparison tables, step-by-step numerical examples and explicit assumptions; retained source explanations. Additional depth can still be improved."
+    },
+    "M03": {
+      "status": "validated-awaiting-browser-upload",
+      "structuredSections": 8,
+      "notes": "Expanded definitions, assumptions, worked examples, comparison tables, costs, counterexamples and solved checks. Original H2 order and prose preserved. Build and 9 tests passed. Not deployed: required Chrome upload session unavailable.",
+      "preparedBranch": "content/2026-11-16-0600"
+    },
+    "M04": {
+      "status": "validated-awaiting-browser-upload",
+      "structuredSections": 8,
+      "notes": "Expanded definitions, assumptions, worked examples, comparison tables, costs, counterexamples and solved checks. Original H2 order and prose preserved. Build and 9 tests passed. Not deployed: required Chrome upload session unavailable.",
+      "preparedBranch": "content/2026-11-16-0600"
+    },
+    "C04": {
+      "status": "validated-awaiting-browser-upload",
+      "structuredSections": 7,
+      "notes": "Expanded definitions, assumptions, worked examples, comparison tables, costs, counterexamples and solved checks. Original H2 order and prose preserved. Build and 9 tests passed. Not deployed: required Chrome upload session unavailable.",
+      "preparedBranch": "content/2026-11-16-0600"
     }
   }
 }
