@@ -1,3 +1,5 @@
+import { emphasizeProse } from './emphasis.js';
+
 if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
 
 const STORAGE_KEY = 'ai-study:reader:v1';
@@ -247,6 +249,10 @@ function renderRoute() {
   }));
 }
 function decorateProse() {
+  if (route.type === 'reader') {
+    const current = sectionMap.get(keyOf(route.chapterId, route.sectionId));
+    emphasizeProse(app.querySelector('.section-prose'), current.chapter.group, current.section.title);
+  }
   app.querySelectorAll('.section-prose img').forEach(image => {
     image.tabIndex = 0; image.setAttribute('role', 'button');
     image.setAttribute('aria-label', `${image.alt || '그림'} 크게 보기`); image.title = '눌러서 크게 보기';

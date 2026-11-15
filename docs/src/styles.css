@@ -12,3 +12,19 @@
 
 /* Long inline equations scroll inside the reading column on narrow screens. */
 .section-prose .katex{max-width:100%;overflow-x:auto;overflow-y:hidden;vertical-align:middle}.section-prose :not(.katex-display)>.katex{display:inline-block}.section-prose .math-display{overflow-x:auto;overflow-y:hidden}
+
+/* Study annotations: meaning is carried by weight and background as well as color. */
+:root{--study-key:#14685e;--study-key-bg:#e5f1eb;--study-complexity:#6540a2;--study-complexity-bg:#eee8f8;--study-caution:#964709;--study-caution-bg:#fff0d8}
+:root[data-theme=dark]{--study-key:#a3dfca;--study-key-bg:#25443e;--study-complexity:#d6bcff;--study-complexity-bg:#3a3050;--study-caution:#f5c486;--study-caution-bg:#493725}
+.section-prose strong{font-weight:780;color:var(--study-key)}
+.section-prose .study-emphasis{font-weight:780;border-radius:.22em;padding:.04em .16em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.section-prose .study-keyword{color:var(--study-key);background:var(--study-key-bg)}
+.section-prose .study-complexity{color:var(--study-complexity);background:var(--study-complexity-bg);font-weight:780;border-radius:.25em;padding:.03em .25em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.section-prose .study-caution{color:var(--study-caution);background:var(--study-caution-bg);text-decoration:underline;text-decoration-color:color-mix(in srgb,var(--study-caution) 35%,transparent);text-underline-offset:.2em}
+.section-prose h3{color:var(--study-key);padding-left:.7em;border-left:3px solid var(--teal);margin-bottom:1em}
+.section-prose blockquote{background:var(--study-key-bg);border-radius:0 9px 9px 0;padding:18px 22px;color:var(--ink)}
+.section-prose th{color:var(--study-key)}
+.section-prose .math-display{border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:8px;background:var(--surface);padding:12px 10px}
+.section-prose.summary-prose>p{border-left:3px solid var(--teal);border-radius:0 10px 10px 0;background:var(--study-key-bg);padding:20px 23px}
+@media(max-width:800px){.section-prose.summary-prose>p,.section-prose blockquote{padding:16px 17px}.section-prose .study-emphasis{padding-left:.12em;padding-right:.12em}}
+@media print{.section-prose strong,.section-prose .study-emphasis,.section-prose .study-complexity{color:#000}.section-prose .study-emphasis,.section-prose .study-complexity{background:none}.section-prose .math-display{break-inside:avoid}}
