@@ -1,0 +1,20 @@
+{
+  "updated": "2026-11-16",
+  "chapters": {
+    "C03": {
+      "status": "structured-expansion-pass-1",
+      "structuredSections": 9,
+      "notes": "Added concept/comparison tables, step-by-step numerical examples and explicit assumptions; retained source explanations. Additional depth can still be improved."
+    },
+    "M02": {
+      "status": "structured-expansion-pass-1",
+      "structuredSections": 8,
+      "notes": "Added concept/comparison tables, step-by-step numerical examples and explicit assumptions; retained source explanations. Additional depth can still be improved."
+    },
+    "L03": {
+      "status": "structured-expansion-pass-1",
+      "structuredSections": 8,
+      "notes": "Added concept/comparison tables, step-by-step numerical examples and explicit assumptions; retained source explanations. Additional depth can still be improved."
+    }
+  }
+}

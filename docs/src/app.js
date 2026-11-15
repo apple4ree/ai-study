@@ -251,7 +251,9 @@ function renderRoute() {
 function decorateProse() {
   if (route.type === 'reader') {
     const current = sectionMap.get(keyOf(route.chapterId, route.sectionId));
-    emphasizeProse(app.querySelector('.section-prose'), current.chapter.group, current.section.title);
+    const prose = app.querySelector('.section-prose');
+    emphasizeProse(prose, current.chapter.group, current.section.title);
+    organizeLesson(prose);
   }
   app.querySelectorAll('.section-prose img').forEach(image => {
     image.tabIndex = 0; image.setAttribute('role', 'button');
@@ -261,6 +263,30 @@ function decorateProse() {
   app.querySelectorAll('.section-prose table').forEach(table => {
     if (!table.parentElement.classList.contains('table-scroll')) { const wrapper = document.createElement('div'); wrapper.className = 'table-scroll'; table.replaceWith(wrapper); wrapper.append(table); }
   });
+}
+function organizeLesson(prose) {
+  if (!prose || prose.dataset.structured) return;
+  prose.dataset.structured = 'true';
+  const headings = [...prose.querySelectorAll(':scope > h3')];
+  if (!headings.length) return;
+  const outline = document.createElement('nav');
+  outline.className = 'lesson-outline'; outline.setAttribute('aria-label', '이 절의 소주제');
+  const label = document.createElement('p'); label.className = 'lesson-outline-title'; label.textContent = '이 절의 흐름'; outline.append(label);
+  const links = document.createElement('div'); links.className = 'lesson-outline-links';
+  let block;
+  for (const node of [...prose.childNodes]) {
+    if (node.nodeType === 1 && node.tagName === 'H3') {
+      const index = headings.indexOf(node); node.id = `lesson-heading-${index}`; node.tabIndex = -1;
+      block = document.createElement('section'); block.className = 'lesson-block';
+      if (/주의|오해|조건|한계/.test(node.textContent)) block.classList.add('lesson-caution');
+      else if (/예제|직접|따라|계산|과정|단계|세어/.test(node.textContent)) block.classList.add('lesson-example');
+      block.setAttribute('aria-labelledby', node.id); node.before(block); block.append(node);
+      const button = document.createElement('button'); button.type = 'button'; button.dataset.action = 'jump-heading'; button.dataset.heading = node.id;
+      button.textContent = `${index+1}. ${node.textContent}`; links.append(button);
+    } else if (node.nodeType === 1 && /^H[12]$/.test(node.tagName)) block = null;
+    else if (block) block.append(node);
+  }
+  if (headings.length >= 3) { outline.append(links); prose.prepend(outline); }
 }
 function makeDialog(id, className, label, content) {
   let dialog = document.getElementById(id);
@@ -328,6 +354,11 @@ document.addEventListener('click', event => {
   const button = event.target.closest('[data-action]'); if (!button || button.disabled || !progress) return;
   const action = button.dataset.action, key = button.dataset.key;
   if (action === 'settings') openSettings();
+  else if (action === 'jump-heading') {
+    const heading = document.getElementById(button.dataset.heading);
+    heading?.focus({preventScroll:true});
+    heading?.scrollIntoView({block:'start',behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'});
+  }
   else if (action === 'toc') { if (route.type === 'reader') tocMode = 'chapter'; openToc(); }
   else if (action === 'close-dialog') button.closest('dialog')?.close();
   else if (action === 'toc-mode') { tocMode = button.dataset.mode; const dialog = button.closest('dialog'); if (dialog) { dialog.querySelector('.toc-tabs').outerHTML = tocTabs(); dialog.querySelector('.toc-body').innerHTML = tocContent(); dialog.querySelector(`[data-mode="${tocMode}"]`)?.focus(); } else { app.querySelector('.desktop-toc .toc-tabs').outerHTML = tocTabs(); app.querySelector('.desktop-toc .toc-body').innerHTML = tocContent(); app.querySelector(`.desktop-toc [data-mode="${tocMode}"]`)?.focus(); } }

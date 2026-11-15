@@ -4,6 +4,7 @@ import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import { marked } from '../vendor/marked/lib/marked.esm.js';
 import katex from '../vendor/katex/dist/katex.mjs';
+import { auditContent } from './audit-content.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const out = path.join(root, 'docs');
@@ -34,6 +35,7 @@ marked.use({gfm:true,breaks:false, extensions:[
 }});
 
 const catalog=JSON.parse(await fs.readFile(path.join(root,'content/catalog.json'),'utf8'));
+const audit=await auditContent(root,catalog);
 const chapters=[];
 for(const entry of catalog){
   chapterId=entry.id;
@@ -63,8 +65,7 @@ const fontCss=(await fs.readFile(path.join(root,'vendor/katex/dist/katex.min.css
 await fs.writeFile(path.join(out,'vendor/katex/katex.min.css'),fontCss);
 await fs.copyFile(path.join(root,'vendor/katex/LICENSE'),path.join(out,'vendor/katex/LICENSE'));
 await fs.copyFile(path.join(root,'vendor/marked/LICENSE.md'),path.join(out,'vendor/marked-LICENSE.md'));
-const audit=JSON.parse(await fs.readFile(path.join(root,'scripts/export-content/audit.json'),'utf8'));
-const data={version:'2026-11-15',updatedAt:audit.exportedAt,chapters};
+const data={version:(audit.lastEditedAt || audit.exportedAt).slice(0,10),updatedAt:audit.lastEditedAt || audit.exportedAt,chapters};
 await fs.writeFile(path.join(out,'data.json'),JSON.stringify(data));
 await fs.writeFile(path.join(out,'.nojekyll'),'');
 async function walk(dir){const files=[];for(const d of await fs.readdir(dir,{withFileTypes:true})){const p=path.join(dir,d.name);if(d.isDirectory())files.push(...await walk(p));else files.push(p);}return files;}

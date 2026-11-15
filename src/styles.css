@@ -28,3 +28,21 @@
 .section-prose.summary-prose>p{border-left:3px solid var(--teal);border-radius:0 10px 10px 0;background:var(--study-key-bg);padding:20px 23px}
 @media(max-width:800px){.section-prose.summary-prose>p,.section-prose blockquote{padding:16px 17px}.section-prose .study-emphasis{padding-left:.12em;padding-right:.12em}}
 @media print{.section-prose strong,.section-prose .study-emphasis,.section-prose .study-complexity{color:#000}.section-prose .study-emphasis,.section-prose .study-complexity{background:none}.section-prose .math-display{break-inside:avoid}}
+
+/* Structured textbook sections: overview, worked examples, conditions, explanation. */
+.lesson-outline{margin:0 0 1.5em;padding:18px 20px;border:1px solid var(--line);border-radius:12px;background:var(--surface-2)}
+.section-prose .lesson-outline-title{margin:0 0 10px;font-size:.65em;font-weight:750;color:var(--muted);letter-spacing:0}
+.lesson-outline-links{display:flex;flex-wrap:wrap;gap:8px}
+.lesson-outline button{font-size:.63em;line-height:1.65;text-align:left;min-height:36px;padding:7px 11px;border-radius:7px;background:var(--surface);color:var(--study-key);border:1px solid var(--line);overflow-wrap:anywhere}
+.lesson-outline button:hover{border-color:var(--teal);background:var(--study-key-bg)}
+.lesson-block{margin:1.45em 0;padding:24px 25px;border:1px solid var(--line);border-top:3px solid var(--teal);border-radius:12px;background:var(--surface);min-width:0}
+.lesson-block.lesson-example{border-top-color:var(--study-complexity)}
+.lesson-block.lesson-caution{border-top-color:var(--study-caution)}
+.section-prose .lesson-block>h3:first-child{margin:0 0 1.15em;padding-left:0;border-left:0;font-size:1.02em;line-height:1.7}
+.lesson-example>h3:first-child{color:var(--study-complexity)}
+.lesson-caution>h3:first-child{color:var(--study-caution)}
+.section-prose .lesson-block>:last-child{margin-bottom:0}
+.lesson-block h3:focus{outline:2px solid var(--teal);outline-offset:5px;border-radius:3px}
+.lesson-block .table-scroll{margin-left:-2px;margin-right:-2px}
+@media(max-width:800px){.lesson-block{padding:18px 16px;border-radius:10px}.lesson-outline{padding:15px 14px}.lesson-outline-links{gap:7px}.lesson-outline button{font-size:.62em;padding:7px 9px}.section-prose .lesson-block>h3:first-child{font-size:1em}}
+@media print{.lesson-outline{display:none}.lesson-block{border:1px solid #bbb;background:none;padding:12px}.lesson-block>h3{break-after:avoid}}

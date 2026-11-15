@@ -57,3 +57,22 @@ after stripping private source links. Final source sync uses the complete
   HTTP-cache reuse for worker updates to avoid stale styling.
 - Verified: 9 tests, 390px mobile without horizontal overflow, light and dark
   emphasis contrast above 4.5:1, matching visible prose before/after decoration.
+
+## Content development authorized for 2026-11-16
+- User requests substantive textbook expansion and structured explanations before
+  15:00 Asia/Seoul, rather than long uninterrupted prose or interview QA alone.
+- Initial structured pass covers C03, M02, L03. Read content/revisions.json and
+  ignored work/content-development.json before choosing the next chapters.
+- Preserve existing H2 titles/order to keep reader section IDs and bookmarks
+  stable. Add meaningful H3 subtopics, tables, worked examples and conditions.
+- Reader groups H3 sections into cards and supplies an in-section jump outline.
+- scripts/format-prose.mjs splits long prose without changing its wording;
+  invoke with explicit chapter paths after writing, never as a summarizer.
+- scripts/audit-content.mjs refreshes current-source counts during the build.
+  Original import hashes remain provenance, not a claim of an unchanged source.
+- Tests compare exact current source math, code, tables and exercise answers;
+  maintain baseline minimum coverage while adding content. Do not disable them.
+- Browser upload data.json by local file path; do not print its contents or
+  route the full body through create_blob. Reuse remote hashes for other assets.
+- Hourly follow-ups are scheduled at 06:00 through 14:00; final QA at 14:45.
+  After 14:30, finish pending validation and publishing rather than new rewrites.

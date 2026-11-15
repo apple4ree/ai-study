@@ -113,7 +113,7 @@ test('44 chapter records and every source chapter survive section splitting', ()
   }
 });
 
-test('all 2,747 TeX annotations preserve the exact source, including table pipes and underscores', () => {
+test('all TeX annotations preserve the exact current source, including table pipes and underscores', () => {
   let count = 0;
   for (const chapter of data.chapters) {
     const expected = mathInSource(sources.get(chapter.id));
@@ -122,7 +122,8 @@ test('all 2,747 TeX annotations preserve the exact source, including table pipes
     assert.equal(actual.length, audit.chapters.find(entry => entry.id === chapter.id).mathExpressions, chapter.id);
     count += actual.length;
   }
-  assert.equal(count, 2747);
+  assert.equal(count, audit.mathExpressionCount);
+  assert.ok(count >= 2747, 'Original mathematical coverage must not shrink');
 });
 
 test('all fenced code blocks preserve code and whitespace exactly', () => {
@@ -153,7 +154,7 @@ test('table headers, rows, cell text and math match the Markdown source', () => 
   }
 });
 
-test('37 local figures and 132 solution blocks remain accessible', async () => {
+test('all local figures and solved exercises remain accessible', async () => {
   let figures = 0, solutions = 0;
   for (const chapter of data.chapters) {
     const images = allNodes(chapter.id, node => node.tag === 'img');
@@ -164,9 +165,10 @@ test('37 local figures and 132 solution blocks remain accessible', async () => {
       await fs.access(path.join(root, 'public', image.attrs.src.slice(2)));
     }
     const details = allNodes(chapter.id, node => node.tag === 'details');
-    assert.equal(details.length, 3, chapter.id);
+    assert.ok(details.length >= 3, `${chapter.id}: retain at least three solved exercises`);
     const expected = [...sources.get(chapter.id).matchAll(/<details>\s*<summary>([\s\S]*?)<\/summary>([\s\S]*?)<\/details>/g)];
-    assert.equal(expected.length, 3, chapter.id);
+    assert.equal(details.length, expected.length, chapter.id);
+    assert.equal(details.length, audit.chapters.find(entry => entry.id === chapter.id).solutions, chapter.id);
     for (let i = 0; i < details.length; i++) {
       assert.equal(find(details[i], node => node.tag === 'summary').length, 1, chapter.id);
       assert.equal(compact(plain(find(details[i], node => node.tag === 'summary')[0])), compact(decode(expected[i][1])), chapter.id);
@@ -176,7 +178,8 @@ test('37 local figures and 132 solution blocks remain accessible', async () => {
     }
     figures += images.length; solutions += details.length;
   }
-  assert.equal(figures, 37); assert.equal(solutions, 132);
+  assert.equal(figures, audit.figureCount); assert.equal(solutions, audit.solutionCount);
+  assert.ok(figures >= 37); assert.ok(solutions >= 132);
 });
 
 test('chapter links resolve and external references preserve their destinations', () => {
