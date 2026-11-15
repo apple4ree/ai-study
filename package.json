@@ -1,0 +1,13 @@
+{
+  "name": "ai-study",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "공학 수학 · CS · ML/DL 개념서 모바일 리더",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "preview": "node scripts/serve.mjs"
+  },
+  "engines": { "node": ">=20" }
+}

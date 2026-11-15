@@ -1,0 +1,428 @@
+[
+  {
+    "id": "M01",
+    "title": "기초 수학·함수",
+    "group": "math",
+    "order": 0,
+    "contentPath": "/content/chapters/M01.md",
+    "figureIds": [
+      "M01"
+    ]
+  },
+  {
+    "id": "M02",
+    "title": "선형대수",
+    "group": "math",
+    "order": 1,
+    "contentPath": "/content/chapters/M02.md",
+    "figureIds": [
+      "M02"
+    ]
+  },
+  {
+    "id": "M03",
+    "title": "미분·다변수 미적분",
+    "group": "math",
+    "order": 2,
+    "contentPath": "/content/chapters/M03.md",
+    "figureIds": [
+      "M03"
+    ]
+  },
+  {
+    "id": "M04",
+    "title": "확률론",
+    "group": "math",
+    "order": 3,
+    "contentPath": "/content/chapters/M04.md",
+    "figureIds": [
+      "M04"
+    ]
+  },
+  {
+    "id": "M05",
+    "title": "통계학",
+    "group": "math",
+    "order": 4,
+    "contentPath": "/content/chapters/M05.md",
+    "figureIds": [
+      "M05"
+    ]
+  },
+  {
+    "id": "M06",
+    "title": "최적화",
+    "group": "math",
+    "order": 5,
+    "contentPath": "/content/chapters/M06.md",
+    "figureIds": [
+      "M06"
+    ]
+  },
+  {
+    "id": "M07",
+    "title": "수치해석·정보이론 기초",
+    "group": "math",
+    "order": 6,
+    "contentPath": "/content/chapters/M07.md",
+    "figureIds": [
+      "M07"
+    ]
+  },
+  {
+    "id": "C01",
+    "title": "프로그래밍·개발 도구",
+    "group": "cs",
+    "order": 7,
+    "contentPath": "/content/chapters/C01.md",
+    "figureIds": []
+  },
+  {
+    "id": "C02",
+    "title": "이산수학",
+    "group": "cs",
+    "order": 8,
+    "contentPath": "/content/chapters/C02.md",
+    "figureIds": []
+  },
+  {
+    "id": "C03",
+    "title": "자료구조",
+    "group": "cs",
+    "order": 9,
+    "contentPath": "/content/chapters/C03.md",
+    "figureIds": [
+      "C03"
+    ]
+  },
+  {
+    "id": "C04",
+    "title": "알고리즘",
+    "group": "cs",
+    "order": 10,
+    "contentPath": "/content/chapters/C04.md",
+    "figureIds": []
+  },
+  {
+    "id": "C05",
+    "title": "컴퓨터 구조",
+    "group": "cs",
+    "order": 11,
+    "contentPath": "/content/chapters/C05.md",
+    "figureIds": [
+      "C05"
+    ]
+  },
+  {
+    "id": "C06",
+    "title": "운영체제·메모리 관리",
+    "group": "cs",
+    "order": 12,
+    "contentPath": "/content/chapters/C06.md",
+    "figureIds": [
+      "C06"
+    ]
+  },
+  {
+    "id": "C07",
+    "title": "네트워크",
+    "group": "cs",
+    "order": 13,
+    "contentPath": "/content/chapters/C07.md",
+    "figureIds": [
+      "C07"
+    ]
+  },
+  {
+    "id": "C08",
+    "title": "데이터베이스",
+    "group": "cs",
+    "order": 14,
+    "contentPath": "/content/chapters/C08.md",
+    "figureIds": []
+  },
+  {
+    "id": "C09",
+    "title": "소프트웨어 공학·서비스 운영",
+    "group": "cs",
+    "order": 15,
+    "contentPath": "/content/chapters/C09.md",
+    "figureIds": []
+  },
+  {
+    "id": "C10",
+    "title": "분산 시스템 기초",
+    "group": "cs",
+    "order": 16,
+    "contentPath": "/content/chapters/C10.md",
+    "figureIds": [
+      "C10"
+    ]
+  },
+  {
+    "id": "L01",
+    "title": "문제 설정·데이터",
+    "group": "ml",
+    "order": 17,
+    "contentPath": "/content/chapters/L01.md",
+    "figureIds": [
+      "L01"
+    ]
+  },
+  {
+    "id": "L02",
+    "title": "전통적 머신러닝",
+    "group": "ml",
+    "order": 18,
+    "contentPath": "/content/chapters/L02.md",
+    "figureIds": [
+      "L02"
+    ]
+  },
+  {
+    "id": "L03",
+    "title": "일반화·평가·실험",
+    "group": "ml",
+    "order": 19,
+    "contentPath": "/content/chapters/L03.md",
+    "figureIds": [
+      "L03"
+    ]
+  },
+  {
+    "id": "L04",
+    "title": "신경망·딥러닝 학습",
+    "group": "ml",
+    "order": 20,
+    "contentPath": "/content/chapters/L04.md",
+    "figureIds": [
+      "L04"
+    ]
+  },
+  {
+    "id": "L05",
+    "title": "주요 신경망 구조",
+    "group": "ml",
+    "order": 21,
+    "contentPath": "/content/chapters/L05.md",
+    "figureIds": [
+      "L05"
+    ]
+  },
+  {
+    "id": "L06",
+    "title": "표현학습·생성 모델",
+    "group": "ml",
+    "order": 22,
+    "contentPath": "/content/chapters/L06.md",
+    "figureIds": []
+  },
+  {
+    "id": "L07",
+    "title": "LLM 학습·추론",
+    "group": "ml",
+    "order": 23,
+    "contentPath": "/content/chapters/L07.md",
+    "figureIds": [
+      "L07"
+    ]
+  },
+  {
+    "id": "L08",
+    "title": "LLM 응용·Agent",
+    "group": "ml",
+    "order": 24,
+    "contentPath": "/content/chapters/L08.md",
+    "figureIds": []
+  },
+  {
+    "id": "L09",
+    "title": "ML 시스템·운영",
+    "group": "ml",
+    "order": 25,
+    "contentPath": "/content/chapters/L09.md",
+    "figureIds": [
+      "L09"
+    ]
+  },
+  {
+    "id": "A01",
+    "title": "내적공간·스펙트럼·이차형식",
+    "group": "advanced",
+    "order": 26,
+    "contentPath": "/content/chapters/A01.md",
+    "figureIds": [
+      "A01"
+    ]
+  },
+  {
+    "id": "A02",
+    "title": "행렬분해·의사역행렬·최소제곱",
+    "group": "advanced",
+    "order": 27,
+    "contentPath": "/content/chapters/A02.md",
+    "figureIds": [
+      "A02"
+    ]
+  },
+  {
+    "id": "A03",
+    "title": "저랭크근사·PCA·섭동",
+    "group": "advanced",
+    "order": 28,
+    "contentPath": "/content/chapters/A03.md",
+    "figureIds": [
+      "A03"
+    ]
+  },
+  {
+    "id": "A04",
+    "title": "행렬미적분과 미분의 연결",
+    "group": "advanced",
+    "order": 29,
+    "contentPath": "/content/chapters/A04.md",
+    "figureIds": [
+      "A04"
+    ]
+  },
+  {
+    "id": "A05",
+    "title": "볼록성·쌍대성·제약 최적화",
+    "group": "advanced",
+    "order": 30,
+    "contentPath": "/content/chapters/A05.md",
+    "figureIds": [
+      "A05"
+    ]
+  },
+  {
+    "id": "A06",
+    "title": "반복 최적화의 수렴과 확률적 학습",
+    "group": "advanced",
+    "order": 31,
+    "contentPath": "/content/chapters/A06.md",
+    "figureIds": [
+      "A06"
+    ]
+  },
+  {
+    "id": "A07",
+    "title": "다변량분포·조건부기댓값·베이지안 추론",
+    "group": "advanced",
+    "order": 32,
+    "contentPath": "/content/chapters/A07.md",
+    "figureIds": [
+      "A07"
+    ]
+  },
+  {
+    "id": "A08",
+    "title": "집중부등식·추정의 정확도·점근이론",
+    "group": "advanced",
+    "order": 33,
+    "contentPath": "/content/chapters/A08.md",
+    "figureIds": [
+      "A08"
+    ]
+  },
+  {
+    "id": "A09",
+    "title": "확률과정·Markov·정상성과 의존",
+    "group": "advanced",
+    "order": 34,
+    "contentPath": "/content/chapters/A09.md",
+    "figureIds": [
+      "A09"
+    ]
+  },
+  {
+    "id": "A10",
+    "title": "조건부 정보량·연쇄법칙·데이터 처리",
+    "group": "advanced",
+    "order": 35,
+    "contentPath": "/content/chapters/A10.md",
+    "figureIds": [
+      "A10"
+    ]
+  },
+  {
+    "id": "A11",
+    "title": "연속 정보량·KL·변분추론",
+    "group": "advanced",
+    "order": 36,
+    "contentPath": "/content/chapters/A11.md",
+    "figureIds": [
+      "A11"
+    ]
+  },
+  {
+    "id": "A12",
+    "title": "압축·채널 용량·율왜곡 이론",
+    "group": "advanced",
+    "order": 37,
+    "contentPath": "/content/chapters/A12.md",
+    "figureIds": [
+      "A12"
+    ]
+  },
+  {
+    "id": "A13",
+    "title": "수치선형대수·오차·반복해법",
+    "group": "advanced",
+    "order": 38,
+    "contentPath": "/content/chapters/A13.md",
+    "figureIds": [
+      "A13"
+    ]
+  },
+  {
+    "id": "A14",
+    "title": "근사·수치미분·적분·정밀도",
+    "group": "advanced",
+    "order": 39,
+    "contentPath": "/content/chapters/A14.md",
+    "figureIds": [
+      "A14"
+    ]
+  },
+  {
+    "id": "E01",
+    "title": "미분방정식·동역학과 수치적 안정성",
+    "group": "optional",
+    "order": 40,
+    "contentPath": "/content/chapters/E01.md",
+    "figureIds": [
+      "E01"
+    ]
+  },
+  {
+    "id": "E02",
+    "title": "Fourier·Laplace 변환과 주파수 해석",
+    "group": "optional",
+    "order": 41,
+    "contentPath": "/content/chapters/E02.md",
+    "figureIds": [
+      "E02"
+    ]
+  },
+  {
+    "id": "E03",
+    "title": "복소수와 복소해석",
+    "group": "optional",
+    "order": 42,
+    "contentPath": "/content/chapters/E03.md",
+    "figureIds": [
+      "E03"
+    ]
+  },
+  {
+    "id": "E04",
+    "title": "편미분방정식과 수치해법",
+    "group": "optional",
+    "order": 43,
+    "contentPath": "/content/chapters/E04.md",
+    "figureIds": [
+      "E04"
+    ]
+  }
+]

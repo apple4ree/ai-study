@@ -1,0 +1,224 @@
+{
+  "M01": {
+    "caption": "밑이 2인 지수·로그 함수. 로그의 정의역은 양수이며 밑에 따라 수치가 달라집니다.",
+    "originalPath": "/tmp/ai_engineer_curriculum/figures/M01.svg",
+    "publicPath": "/figures/M01.svg",
+    "sha256": "e9dda8fb32207048d91a5bf1a5f4f3ec664b8dc799695fbfc4fb26ee72f70b10"
+  },
+  "M02": {
+    "caption": "특이값은 특정 입력 방향의 확대율입니다. 이 행렬의 특이값은 고유값과 일반적으로 다릅니다.",
+    "originalPath": "/tmp/ai_engineer_curriculum/figures/M02.svg",
+    "publicPath": "/figures/M02.svg",
+    "sha256": "d53c0719baa78d0911efec34d2b7b7549cdc253b4794ca90997acf9a130d163e"
+  },
+  "M03": {
+    "caption": "기울기는 가장 빠른 증가 방향이며, 경사하강법은 그 반대 방향으로 이동합니다.",
+    "originalPath": "/tmp/ai_engineer_curriculum/figures/M03.svg",
+    "publicPath": "/figures/M03.svg",
+    "sha256": "be01961373ae87176e95eae5bd624aaefa3cf3f2b7b9e6d406bfd94968f09ad8"
+  },
+  "M04": {
+    "caption": "이항분포의 정확한 확률질량과 표본평균의 표준오차를 계산했습니다. 시계열 의존성이 있으면 같은 공식이 그대로 성립하지 않습니다. n이 다르면 지지점 간격도 달라지므로 개별 점의 높이보다 평균 주변의 구간 확률과 분산을 비교하세요.",
+    "originalPath": "/tmp/ai_engineer_curriculum/figures/M04.svg",
+    "publicPath": "/figures/M04.svg",
+    "sha256": "12c1d9c016c8208e4a713b3280bf6849aa8703789406e1498f62bbc6feb65d94"
+  },
+  "M05": {
+    "caption": "seed=42 난수 시뮬레이션의 일부입니다. 95%는 고정된 모수가 특정 구간에 들어갈 확률이 아니라 구간 생성 절차의 장기적 포함률입니다.",
+    "originalPath": "/tmp/ai_engineer_curriculum/figures/M05.svg",
+    "publicPath": "/figures/M05.svg",
+    "sha256": "7f5589a1b643be492c2b2ff08f429fbc853a5cd89c5f8b7007a73c54b5d082d3"
+  },
+  "M06": {
+    "caption": "동일한 볼록함수에 경사하강법을 실제 적용한 계산 결과입니다. 일반 신경망의 수렴 조건을 뜻하지 않습니다.",
+    "originalPath": "/tmp/ai_engineer_curriculum/figures/M06.svg",
+    "publicPath": "/figures/M06.svg",
+    "sha256": "5b798818ab7ddb5de4c03793e650983a6eb074ba843213ecd9b16d286dd6f997"
+  },
+  "M07": {
+    "caption": "왼쪽은 float64 차분의 오차, 오른쪽은 밑이 2인 이진 엔트로피입니다. 수치해석과 정보이론의 목적을 구분합니다.",
+    "originalPath": "/tmp/ai_engineer_curriculum/figures/M07.svg",
+    "publicPath": "/figures/M07.svg",
+    "sha256": "7bf95322561adf05a78b58ed15d5f42ebe3bf033d76f1bab446908221f4a0cd9"
+  },
+  "C03": {
+    "caption": "이론적 성장 함수를 그렸으며 실제 런타임 벤치마크가 아닙니다. 해시 테이블의 최악 시간은 구현과 가정에 따라 선형일 수 있습니다.",
+    "originalPath": "/tmp/ai_engineer_curriculum/figures/C03.svg",
+    "publicPath": "/figures/C03.svg",
+    "sha256": "91147c9cc8cd97c53328675b62764091018ec25451d6473a095ebc14e0f80b1e"
+  },
+  "C05": {
+    "caption": "명시한 작은 캐시 모델의 시뮬레이션입니다. 실제 CPU의 캐시 크기·연관도·prefetch 동작과 성능은 다릅니다.",
+    "originalPath": "/tmp/ai_engineer_curriculum/figures/C05.svg",
+    "publicPath": "/figures/C05.svg",
+    "sha256": "e127e87aac8e1bc6ada8ad9378d8fbbba5b8f8363d9d44958737344edaafc0b9"
+  },
+  "C06": {
+    "caption": "24B 연속 할당은 왼쪽 배치에서는 실패하고 오른쪽에서는 가능합니다. 물리 메모리·가상 메모리 전체 구조를 나타내는 그림은 아닙니다.",
+    "originalPath": "/tmp/ai_engineer_curriculum/figures/C06.svg",
+    "publicPath": "/figures/C06.svg",
+    "sha256": "3184812bbc542d217a895b16bd5a1c21d079f5de7010cc137f828fbabf1e52b9"
+  },
+  "C07": {
+    "caption": "이론적 대기행렬 모형입니다. 실제 HTTP 서버의 지연시간이나 p95를 측정한 값이 아닙니다.",
+    "originalPath": "/tmp/ai_engineer_curriculum/figures/C07.svg",
+    "publicPath": "/figures/C07.svg",
+    "sha256": "0433afac8b4fe5810833509d85db946ca7193ee83019210ed6fbc3eb195bebdd"
+  },
+  "C10": {
+    "caption": "Amdahl 법칙의 수학적 예제입니다. 분산 시스템에서는 네트워크·동기화·부분 실패 비용도 추가됩니다.",
+    "originalPath": "/tmp/ai_engineer_curriculum/figures/C10.svg",
+    "publicPath": "/figures/C10.svg",
+    "sha256": "f1330ad6109c89685259337633c8a273610bd0ec6704985f9090e8f0d34eccb1"
+  },
+  "L01": {
+    "caption": "미래 h기간을 쓰는 라벨은 분할 경계를 넘어갈 수 있으므로 제거·간격 처리가 필요합니다. 그림의 간격 5는 모든 데이터에 적용하는 규칙이 아닙니다.",
+    "originalPath": "/tmp/ai_engineer_curriculum/figures/L01.svg",
+    "publicPath": "/figures/L01.svg",
+    "sha256": "a2584d034a8997c23314dd6f049e8400d820b9292f23369e008daa7957c129ef"
+  },
+  "L02": {
+    "caption": "로지스틱 회귀의 출력은 확률 모델이며 임계값 선택은 별도 결정입니다. 예측 확률의 보정 여부도 평가해야 합니다.",
+    "originalPath": "/tmp/ai_engineer_curriculum/figures/L02.svg",
+    "publicPath": "/figures/L02.svg",
+    "sha256": "d59efc837a8fef30489d36a1ce4daa1e4568a4bc4eb7830739e84d4bc01f79c1"
+  },
+  "L03": {
+    "caption": "독립 생성한 검증 표본의 MSE입니다. 매번 같은 검증셋으로 선택을 반복하면 검증셋에도 과적합할 수 있습니다.",
+    "originalPath": "/tmp/ai_engineer_curriculum/figures/L03.svg",
+    "publicPath": "/figures/L03.svg",
+    "sha256": "198f0741fb597ea7cdd99f16eb029f48f0654394949ac91088926378c335e2fd"
+  },
+  "L04": {
+    "caption": "ReLU의 x=0 도함수는 수학적으로 정의되지 않습니다. 프레임워크는 역전파를 위한 규약을 사용합니다.",
+    "originalPath": "/tmp/ai_engineer_curriculum/figures/L04.svg",
+    "publicPath": "/figures/L04.svg",
+    "sha256": "c5c184348f1d11990c5776ac2c44c8fa402ffbe55739c08943067fe0b28cc1c6"
+  },
+  "L05": {
+    "caption": "고정 난수 Q·K로 softmax(QKᵀ/√d)를 계산했습니다. 각 행의 합은 1이며 causal mask 위쪽은 0입니다. 실제 모델의 attention 분석이 아닙니다.",
+    "originalPath": "/tmp/ai_engineer_curriculum/figures/L05.svg",
+    "publicPath": "/figures/L05.svg",
+    "sha256": "64fd3a7e49887e22a131867427c773f725025238803e10e88ba987903b398f15"
+  },
+  "L07": {
+    "caption": "단순 KV 저장량 공식 2×층수×배치×토큰수×KV head수×head차원×원소 byte를 적용했습니다. 가중치·활성값·할당기 비용은 별도입니다.",
+    "originalPath": "/tmp/ai_engineer_curriculum/figures/L07.svg",
+    "publicPath": "/figures/L07.svg",
+    "sha256": "9ea430b0a180ea6fda7e581738f894ffcc16eb81ba34a6a32347425a94035180"
+  },
+  "L09": {
+    "caption": "실제 GPU 요구량은 활성값·workspace·통신·메모리 단편화 등을 더해 측정해야 합니다. 특정 7B 모델의 실행 가능성을 보장하지 않습니다.",
+    "originalPath": "/tmp/ai_engineer_curriculum/figures/L09.svg",
+    "publicPath": "/figures/L09.svg",
+    "sha256": "07268a56d2968428464f44c959fd537869b47914319ea26757a607fe0ede0e9c"
+  },
+  "A01": {
+    "caption": "함수는 z=xᵀHx입니다. 왼쪽은 모든 비영 방향에서 양수인 양의 정부호, 오른쪽은 방향에 따라 부호가 다른 부정부호 이차형식입니다.",
+    "originalPath": "/tmp/ai_engineer_curriculum/advanced/figures/A01.svg",
+    "publicPath": "/figures/A01.svg",
+    "sha256": "fc3816e18e3e9d449cd650293767bda620cbf4392fba9c34f83a036ff7e0929c"
+  },
+  "A02": {
+    "caption": "L=[[2,0,0],[6,1,0],[-8,5,3]]이며 실제 곱 LLᵀ가 A와 일치합니다. 대각 성분이 양수인 실수 Cholesky 분해는 A가 대칭 양의 정부호일 때 사용합니다.",
+    "originalPath": "/tmp/ai_engineer_curriculum/advanced/figures/A02.svg",
+    "publicPath": "/figures/A02.svg",
+    "sha256": "cfb1997ffadd50eb4054bc641988a9c7a9ded3c381c0a6ca0f0b1364b96a1a99"
+  },
+  "A03": {
+    "caption": "절단 SVD의 실제 재구성 오차와 sqrt(Σ_{i>k}σᵢ²)를 비교했습니다. 합성 신호의 rank가 3이어도 잡음을 더한 행렬의 rank는 일반적으로 20입니다.",
+    "originalPath": "/tmp/ai_engineer_curriculum/advanced/figures/A03.svg",
+    "publicPath": "/figures/A03.svg",
+    "sha256": "f8ccf6192b79cbff301996d71e09474eba9196848a37d11eabd9301d67a20d26"
+  },
+  "A04": {
+    "caption": "H=[[3,1],[1,2]]입니다. f(x+hv)=1.5+.4h+1.66h²이며 전진 차분은 .4+1.66h입니다. 중앙 차분의 작은 오차는 float64 반올림에 의한 것입니다.",
+    "originalPath": "/tmp/ai_engineer_curriculum/advanced/figures/A04.svg",
+    "publicPath": "/figures/A04.svg",
+    "sha256": "d5b2d9f09f911a19c298ae31f6b4e678b1f0224db2bce4491616ddfb809f776b"
+  },
+  "A05": {
+    "caption": "L(x,λ)=x²+λ(1−x)입니다. x*=1, λ*=2에서 원문제와 쌍대문제의 값이 모두 1이고 KKT 조건을 만족합니다.",
+    "originalPath": "/tmp/ai_engineer_curriculum/advanced/figures/A05.svg",
+    "publicPath": "/figures/A05.svg",
+    "sha256": "debe449597cbc294806b2a54923cacf2c19d5fc7c38072dbc2f5417c75d47f84"
+  },
+  "A06": {
+    "caption": "강볼록 이차함수에 정확한 gradient를 적용했습니다. η=.21에서는 y축의 배율 1−10η=−1.1이 되어 발산합니다. 일반 SGD·Adam의 보편적 수렴 보장은 아닙니다.",
+    "originalPath": "/tmp/ai_engineer_curriculum/advanced/figures/A06.svg",
+    "publicPath": "/figures/A06.svg",
+    "sha256": "a93782b682c0b0bb3ec77e018161b16d0db8348a3b41b7b3a3873ba6aa266170"
+  },
+  "A07": {
+    "caption": "왼쪽 산점도는 seed=7 합성 표본입니다. 오른쪽은 표본 추정이 아닌 정확한 정규밀도 계산입니다. N(평균, 분산) 표기를 사용했습니다.",
+    "originalPath": "/tmp/ai_engineer_curriculum/advanced/figures/A07.svg",
+    "publicPath": "/figures/A07.svg",
+    "sha256": "a062294a6479d0bc9d9ed5aa2cf896cbf0c43c80801ba82a1c82b18f75bd613b"
+  },
+  "A08": {
+    "caption": "이항분포를 직접 합한 값과 2exp(−2nε²)를 비교했습니다. 독립성과 [0,1] 범위가 가정이며, 의존 관측을 같은 n개의 독립 표본으로 취급할 수 없습니다.",
+    "originalPath": "/tmp/ai_engineer_curriculum/advanced/figures/A08.svg",
+    "publicPath": "/figures/A08.svg",
+    "sha256": "2c1ff94be0410c7e288714a5866d0dac790bd0167c1731f2aafe22a5ccab0021"
+  },
+  "A09": {
+    "caption": "왼쪽 두 경로는 합성 표본입니다. 유한 표본 자기상관은 이론값과 다를 수 있습니다. 정상성은 독립성이나 유한 표본에서의 정확한 평균을 뜻하지 않습니다.",
+    "originalPath": "/tmp/ai_engineer_curriculum/advanced/figures/A09.svg",
+    "publicPath": "/figures/A09.svg",
+    "sha256": "f9b60daf1ea4004e6d393dce4d497227d749bea4de981be794a46f1b15a48b64"
+  },
+  "A10": {
+    "caption": "X→Y→Z가 Markov 연쇄이고 두 flip 잡음이 서로 및 X와 독립입니다. 조건부 엔트로피는 증가하고 X와의 상호정보량은 감소하는 이 예제를 정확히 계산했습니다.",
+    "originalPath": "/tmp/ai_engineer_curriculum/advanced/figures/A10.svg",
+    "publicPath": "/figures/A10.svg",
+    "sha256": "cd7dad3dc3303a73f738e7a9c142b92f184d79de61119255be9de8e3d8eabe93"
+  },
+  "A11": {
+    "caption": "로그 밑은 e입니다. 연속 엔트로피는 음수가 될 수 있고 척도에 따라 바뀝니다. 같은 가역적 좌표변환을 두 분포에 적용하면 KL은 유지됩니다.",
+    "originalPath": "/tmp/ai_engineer_curriculum/advanced/figures/A11.svg",
+    "publicPath": "/figures/A11.svg",
+    "sha256": "cfec426904efba36e22cce50e3b3e8dfeee3da5e5e1f1529d9f59344da6b68ca"
+  },
+  "A12": {
+    "caption": "왼쪽은 무기억 이진 대칭 채널, 오른쪽은 분산 1인 iid Gaussian 원천과 제곱오차 왜곡의 점근적 한계입니다. 실제 LLM 양자화의 bit별 정확도를 측정한 그래프가 아닙니다.",
+    "originalPath": "/tmp/ai_engineer_curriculum/advanced/figures/A12.svg",
+    "publicPath": "/figures/A12.svg",
+    "sha256": "96b0a696afc505d77cc5239c87a04624634a91083487d4175f582b7c0bd75993"
+  },
+  "A13": {
+    "caption": "b=(1,ε), x=(1,1)에 대해 우변에 δb를 더한 문제를 계산했습니다. perturbed 문제의 잔차가 0이어도 원래 해와 차이가 클 수 있습니다.",
+    "originalPath": "/tmp/ai_engineer_curriculum/advanced/figures/A13.svg",
+    "publicPath": "/figures/A13.svg",
+    "sha256": "8c4470c63da01f44f0fa96cd9e43f5afba137822258fdd5db71a94239aa69ec2"
+  },
+  "A14": {
+    "caption": "중앙 차분은 충분한 매끄러움 아래 절단오차 O(h²), 복합 Simpson은 O(n⁻⁴)입니다. 반올림 오차가 지배하면 간격을 줄여도 개선되지 않습니다.",
+    "originalPath": "/tmp/ai_engineer_curriculum/advanced/figures/A14.svg",
+    "publicPath": "/figures/A14.svg",
+    "sha256": "1e87e3778aaae878bbacdf9aea2ea56e84c9448adf5c83359e8507a11bd8577c"
+  },
+  "E01": {
+    "caption": "원래 ODE의 해는 모든 t≥0에서 감쇠하지만 explicit Euler는 시간 간격이 너무 크면 발산합니다. h=1 경계는 진폭을 유지하며 정확한 감쇠를 재현하지 않습니다.",
+    "originalPath": "/tmp/ai_engineer_curriculum/advanced/figures/E01.svg",
+    "publicPath": "/figures/E01.svg",
+    "sha256": "2d1394a27a4205beb146089727e546c92334e3a5697a7f0c6d9053a4eeb0b29e"
+  },
+  "E02": {
+    "caption": "표본화율 8 Hz에서 1 Hz와 7 Hz cosine이 동일한 값을 냅니다. bandlimit·anti-alias filtering 없이 표본만으로 고주파 원신호를 복원할 수 없습니다.",
+    "originalPath": "/tmp/ai_engineer_curriculum/advanced/figures/E02.svg",
+    "publicPath": "/figures/E02.svg",
+    "sha256": "79092acca7a5a13e88a4a38da215f100ffc6acdbe71fd82594749dbc63f558d3"
+  },
+  "E03": {
+    "caption": "z²의 차분몫은 두 방향에서 2+2i로 수렴합니다. conjugate의 차분몫은 실수 방향 1, 허수 방향 −1이어서 복소미분이 존재하지 않습니다.",
+    "originalPath": "/tmp/ai_engineer_curriculum/advanced/figures/E03.svg",
+    "publicPath": "/figures/E03.svg",
+    "sha256": "1af1dec5fa5ec831d1746cca0e6af601a61900941bfa9bdc137c767df34200d3"
+  },
+  "E04": {
+    "caption": "오른쪽은 Δx=.05, 초기값 sin(πx)+.1sin(19πx), 40회 explicit FTCS 계산입니다. r=.6에서 고주파 오차가 증폭합니다. 이 안정조건을 모든 PDE에 그대로 적용할 수는 없습니다.",
+    "originalPath": "/tmp/ai_engineer_curriculum/advanced/figures/E04.svg",
+    "publicPath": "/figures/E04.svg",
+    "sha256": "b5f9729df4ed82bc11453bbbfab12fd3893579f259be5dc73bf32aef5789581c"
+  }
+}
