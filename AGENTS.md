@@ -47,3 +47,13 @@ after stripping private source links. Final source sync uses the complete
 
 - Public catalog, export audit, and generated data omit private Notion URLs and
   page identifiers. Keep original source metadata only in ignored work/.
+
+## Reader emphasis (2026-11-16 KST)
+- src/emphasis.js decorates reader prose: complexity badges, first-use subject
+  terms, and caution phrases. Code blocks, links, and KaTeX trees are excluded.
+- Source and rendered text stay identical; keep the full textbook untouched.
+- npm run build copies the module to docs/src and refreshes the offline list.
+- Offline installation uses network-refresh requests; registration disables
+  HTTP-cache reuse for worker updates to avoid stale styling.
+- Verified: 9 tests, 390px mobile without horizontal overflow, light and dark
+  emphasis contrast above 4.5:1, matching visible prose before/after decoration.
