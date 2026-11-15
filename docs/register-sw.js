@@ -1,7 +1,7 @@
 if ('serviceWorker' in navigator && location.protocol !== 'file:') {
   window.addEventListener('load', async () => {
     try {
-      const reg = await navigator.serviceWorker.register('./sw.js', {scope:'./'});
+      const reg = await navigator.serviceWorker.register('./sw.js', {scope:'./',updateViaCache:'none'});
       const ready = await navigator.serviceWorker.ready;
       const notify = () => window.dispatchEvent(new CustomEvent('offline-ready'));
       if (navigator.serviceWorker.controller) notify();
