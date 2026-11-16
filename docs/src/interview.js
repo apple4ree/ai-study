@@ -1,0 +1,37 @@
+const escape = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const normalize = value => String(value).normalize('NFKC').toLocaleLowerCase();
+
+export function validateInterviewBank(bank) {
+  if (bank?.version !== 1 || !Array.isArray(bank.topics) || !Array.isArray(bank.questions) || bank.questions.length !== 100) throw new Error('면접 자료 형식을 확인해 주세요.');
+  const ids = new Set(), topics = new Set(bank.topics.map(t => t.id));
+  if (topics.size !== 6) throw new Error('면접 자료의 분야 구성을 확인해 주세요.');
+  for (const q of bank.questions) {
+    if (!/^Q\d{3}$/.test(q.id) || ids.has(q.id) || !topics.has(q.topic) || !['중상','상'].includes(q.level) || typeof q.focus !== 'boolean') throw new Error('면접 문항의 식별자를 확인해 주세요.');
+    ids.add(q.id);
+    if (typeof q.question !== 'string' || !q.question.trim() || !Array.isArray(q.answer) || q.answer.length !== 3 || q.answer.some(a => typeof a !== 'string' || !a.trim()) || !q.followUp?.question || !q.followUp?.answer || !q.pitfall) throw new Error('면접 문항에 빠진 답변이 있습니다.');
+  }
+  for (const topic of bank.topics) {
+    if (bank.questions.filter(q => q.topic === topic.id).length !== topic.count || !/^C\d{2}$/.test(topic.chapterId) || !/^s\d+$/.test(topic.sectionId)) throw new Error('분야별 면접 문항 수를 확인해 주세요.');
+    if (!Array.isArray(topic.sources) || topic.sources.some(s => !/^https:\/\//.test(s.url) || !s.title)) throw new Error('면접 자료의 출처를 확인해 주세요.');
+  }
+  return bank;
+}
+
+export function filterInterview(bank, {topic='all', level='all', focus=false, query=''}={}) {
+  const terms=normalize(query).trim().split(/\s+/).filter(Boolean);
+  return bank.questions.filter(q => (topic==='all'||q.topic===topic) && (level==='all'||q.level===level) && (!focus||q.focus) && terms.every(term => normalize([q.id,q.question,...q.answer,q.followUp.question,q.followUp.answer,q.pitfall].join(' ')).includes(term)));
+}
+
+export function renderInterviewCards(bank, options={}) {
+  const questions=filterInterview(bank,options), topics=new Map(bank.topics.map(t=>[t.id,t]));
+  if (!questions.length) return '<p class="qa-empty">일치하는 문항이 없어요. 검색어 또는 필터를 바꿔 보세요.</p>';
+  return questions.map(q => {
+    const topic=topics.get(q.topic);
+    return `<article class="qa-card" aria-labelledby="qa-${q.id}"><div class="qa-meta"><span>${escape(q.id)} · ${escape(topic.title)}</span><span class="qa-level ${q.level==='상'?'qa-high':''}">난도 ${escape(q.level)}</span>${q.focus?'<span class="qa-focus">우선 복습</span>':''}</div><h2 id="qa-${q.id}"><span class="qa-letter">Q.</span> ${escape(q.question)}</h2><details class="qa-answer"><summary>A. 답변 확인</summary><ol>${q.answer.map(a=>`<li>${escape(a)}</li>`).join('')}</ol><div class="qa-pitfall"><strong>피할 답변</strong><p>${escape(q.pitfall)}</p></div><p class="qa-book-link"><a href="#/read/${topic.chapterId}/${topic.sectionId}">개념서에서 원리·예제 읽기 →</a></p></details><details class="qa-follow"><summary>꼬리질문: ${escape(q.followUp.question)}</summary><p>${escape(q.followUp.answer)}</p></details></article>`;
+  }).join('');
+}
+
+export function renderInterviewPage(bank, options={}) {
+  const topic=options.topic||'all';
+  return `<main id="main" class="qa-main"><a class="qa-back" href="#/">← 서재</a><p class="eyebrow">Computer Science · 원리에서 설계까지</p><h1 tabindex="-1">CS 심화 면접<br>100문항</h1><p class="qa-intro">정의에서 멈추지 않고, 조건·반례·설계 선택·장애 원인을 설명하는 연습.<br>질문을 읽고 먼저 답한 뒤 <strong>A. 답변 확인</strong>을 펼쳐 보세요.</p><details class="qa-guide"><summary>난도와 활용 방법</summary><p><strong>중상 38문항:</strong> 동작 원리와 적용 조건을 실행 순서·비용으로 설명합니다.<br><strong>상 62문항:</strong> 경쟁 상태·부분 실패·보장 범위·대안의 비용까지 비교합니다.</p><p>답변은 <strong>핵심 판단 → 작동 원리 → 조건·대안</strong>의 세 항목입니다. 30~60초로 먼저 말하고 꼬리질문까지 연습하세요. ‘우선 복습’ 36문항은 각 분야의 핵심 연결을 먼저 훑는 선택이며 실제 출제 빈도를 뜻하지 않습니다.</p><p>공개 요구 역량에 맞춰 작성한 연습 문제입니다. 실제 회사 기출·면접 평가 기준은 아닙니다. 주제별 출처에서 엔진·프로토콜·런타임의 세부 보장을 확인하세요.</p></details><nav class="qa-topic-nav" aria-label="면접 질문 분야"><a href="#/interview" ${topic==='all'?'aria-current="page"':''}>전체 100</a>${bank.topics.map(t=>`<a href="#/interview/${t.id}" ${topic===t.id?'aria-current="page"':''}>${escape(t.title)} ${t.count}</a>`).join('')}</nav><div class="qa-controls"><label class="qa-search-label" for="qa-search">질문·답변 검색<input type="search" id="qa-search" placeholder="예: Q083, 재시도, p99" value="${escape(options.query||'')}" autocomplete="off"></label><label for="qa-level">난도<select id="qa-level"><option value="all">전체 난도</option><option value="중상" ${options.level==='중상'?'selected':''}>중상</option><option value="상" ${options.level==='상'?'selected':''}>상</option></select></label><label class="qa-focus-filter"><input type="checkbox" id="qa-focus" ${options.focus?'checked':''}>우선 복습만</label></div><div class="qa-results-bar"><p id="qa-result-count" role="status">${filterInterview(bank,options).length} / 100문항</p><div class="qa-answer-tools"><button type="button" data-action="qa-open">답변 모두 펼치기</button><button type="button" data-action="qa-close">답변 모두 접기</button></div></div><div id="qa-list">${renderInterviewCards(bank,options)}</div><details class="qa-sources"><summary>주제별 공식 문서·교재</summary>${bank.topics.filter(t=>topic==='all'||t.id===topic).map(t=>`<section><h2>${escape(t.title)}</h2><ul>${t.sources.map(s=>`<li><a href="${escape(s.url)}" target="_blank" rel="noopener noreferrer">${escape(s.title)}</a></li>`).join('')}</ul></section>`).join('')}</details></main>`;
+}

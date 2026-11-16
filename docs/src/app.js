@@ -1,4 +1,5 @@
 import { emphasizeProse } from './emphasis.js';
+import { validateInterviewBank, filterInterview, renderInterviewPage, renderInterviewCards } from './interview.js';
 
 if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
 
@@ -31,7 +32,8 @@ const ICONS = {
 };
 const app = document.querySelector('#app');
 const dialogRoot = document.querySelector('#dialog-root');
-let data, chapterMap, sectionMap, orderedSections, searchIndex;
+let data, chapterMap, sectionMap, orderedSections, searchIndex, interviewBank;
+let qaQuery = '', qaLevel = 'all', qaFocus = false;
 let progress, route = { type: 'home' }, filter = 'all', query = '', reviewTab = 'confused', tocMode = 'chapter';
 let pendingScroll = null, scrollTimer, searchTimer, toastTimer, scrollLocked = false, storageErrorShown = false;
 let pendingImport = null, readySent = false;
@@ -118,6 +120,7 @@ function parseRoute() {
     const parts = location.hash.replace(/^#\/?/, '').split('/').filter(Boolean).map(decodeURIComponent);
     if (!parts.length) return { type: 'home' };
     if (parts[0] === 'review' && parts.length === 1) return { type: 'review' };
+    if (parts[0] === 'interview' && parts.length <= 2 && (!parts[1] || interviewBank.topics.some(topic => topic.id === parts[1]))) return { type: 'interview', topic: parts[1] || 'all' };
     if (parts[0] === 'read' && parts[1]) {
       const chapter = chapterMap.get(parts[1]);
       if (!chapter) return { type: 'missing' };
@@ -144,17 +147,17 @@ function sectionCard(item, suffix = '') {
 }
 function interviewPanel() {
   const topics = [
-    ['C03', '자료구조', '해시·힙·LRU·균형 트리·Bloom Filter', 12],
-    ['C04', '알고리즘', '복잡도·이진탐색·그래프·그리디·DP', 8],
-    ['C06', '운영체제', '프로세스·메모리·동기화·GIL·컨테이너', 10],
-    ['C07', '네트워크', 'HTTPS 흐름·타임아웃·스트리밍·재시도', 10],
-    ['C08', '데이터베이스', '인덱스·SQL·트랜잭션·MVCC·복구', 10],
-    ['C10', '분산 시스템', '복제·합의·멱등성·큐·캐시·역압력', 10],
+    ['C03', '자료구조', '재해싱 지연·LRU 경합·구간 질의·근사 검색', 18],
+    ['C04', '알고리즘', '불변식·반례·공간 압축·외부 정렬·분산 Top-K', 16],
+    ['C06', '운영체제', 'GIL·COW·이벤트 루프·OOM·잠금·취소', 16],
+    ['C07', '네트워크', 'HTTP/2·QUIC·deadline·재시도·꼬리 지연', 16],
+    ['C08', '데이터베이스', '실행 계획·MVCC·write skew·인덱스·복구', 18],
+    ['C10', '분산 시스템', 'Raft·quorum·멱등성·fencing·캐시 경쟁', 16],
   ];
-  return `<section class="interview-panel" aria-labelledby="interview-title"><p class="eyebrow">Computer Science · 집중 복습</p><h2 id="interview-title">CS 면접 준비</h2><p class="interview-lead">원리와 계산 예제부터 답변·꼬리질문 60개까지.<br>각 단원의 <strong>핵심 정리</strong>에서 시작하세요.</p><div class="interview-grid">${topics.map(([id, title, description, count]) => {
+  return `<section class="interview-panel" aria-labelledby="interview-title"><p class="eyebrow">Computer Science · 집중 복습</p><h2 id="interview-title">CS 면접 준비</h2><p class="interview-lead">조건·반례·설계 선택을 묻는 <strong>심화 Q&A 100개</strong>.<br>답변을 가리고 먼저 설명한 뒤 꼬리질문까지 연습하세요.</p><a class="button button-primary qa-start-link" href="#/interview">심화 면접 100문항 모아보기 →</a><div class="interview-grid">${topics.map(([id, title, description, count]) => {
     const chapter = chapterMap.get(id);
     const section = chapter.sections.find(s => s.title === '핵심 정리');
-    return `<a class="interview-card" href="${readHref(id, section.id)}"><span class="eyebrow">${id} · ${count}개 질문</span><strong>${title}</strong><span>${description}</span><span class="interview-go">집중 복습 ${icon('right')}</span></a>`;
+    return `<a class="interview-card" href="#/interview/${id}"><span class="eyebrow">${id} · ${count}개 질문</span><strong>${title}</strong><span>${description}</span><span class="interview-go">집중 복습 ${icon('right')}</span></a>`;
   }).join('')}</div><details class="interview-plan"><summary>시간이 없다면 · 4시간 복습 순서</summary><ol><li>자료구조 45분: 해시·배열·힙·LRU를 말로 설명하기</li><li>알고리즘 35분: 이진탐색·BFS·DP의 조건과 비용 확인</li><li>운영체제 40분: 프로세스·스레드·GIL·메모리·잠금 비교</li><li>네트워크 35분: 요청 경로·timeout·중복 재시도 추적</li><li>데이터베이스 35분: 인덱스 선택·SQL·동시 갱신 설명</li><li>분산 시스템 30분: 큐 재전달·멱등성·캐시·부분 실패 정리</li><li>마지막 20분: 답변을 가리고 원리 → 조건 → 예시 → 한계 순서로 말하기</li></ol><p>공개된 CS 요구 역량에 맞춘 연습입니다. 실제 면접 기출이나 출제 빈도를 뜻하지 않습니다.</p></details></section>`;
 }
 
@@ -253,8 +256,8 @@ function renderRoute() {
   saveScroll(); const previousRoute = route; route = parseRoute();
   if (route.type !== 'reader') tocMode = 'all'; else if (previousRoute.type !== 'reader' || previousRoute.chapterId !== route.chapterId) tocMode = 'chapter';
   scrollLocked = true;
-  app.innerHTML = route.type === 'reader' ? renderReader() : route.type === 'review' ? renderReview() : route.type === 'missing' ? renderMissing() : renderHome();
-  document.title = route.type === 'reader' ? `${sectionMap.get(keyOf(route.chapterId, route.sectionId)).section.title} · AI 개념서` : route.type === 'review' ? '복습 노트 · AI 개념서' : 'AI 개념서';
+  app.innerHTML = route.type === 'reader' ? renderReader() : route.type === 'review' ? renderReview() : route.type === 'interview' ? `${header()}${renderInterviewPage(interviewBank, interviewOptions())}${bottomBar()}` : route.type === 'missing' ? renderMissing() : renderHome();
+  document.title = route.type === 'reader' ? `${sectionMap.get(keyOf(route.chapterId, route.sectionId)).section.title} · AI 개념서` : route.type === 'review' ? '복습 노트 · AI 개념서' : route.type === 'interview' ? 'CS 심화 면접 100문항 · AI 개념서' : 'AI 개념서';
   decorateProse();
   const y = pendingScroll ?? 0; pendingScroll = null;
   requestAnimationFrame(() => requestAnimationFrame(() => {
@@ -264,7 +267,16 @@ function renderRoute() {
     if (route.type === 'reader') { progress.lastRead = { chapterId: route.chapterId, sectionId: route.sectionId, scrollY: Math.max(0, window.scrollY) }; persist(); }
   }));
 }
+function interviewOptions() { return { topic: route.topic || 'all', query: qaQuery, level: qaLevel, focus: qaFocus }; }
+function decorateInterview() { app.querySelectorAll('.qa-answer,.qa-follow').forEach(node => emphasizeProse(node, 'cs', '')); }
+function refreshInterview() {
+  if (route.type !== 'interview') return;
+  app.querySelector('#qa-list').innerHTML = renderInterviewCards(interviewBank, interviewOptions());
+  app.querySelector('#qa-result-count').textContent = `${filterInterview(interviewBank, interviewOptions()).length} / 100문항`;
+  decorateInterview();
+}
 function decorateProse() {
+  if (route.type === 'interview') decorateInterview();
   if (route.type === 'reader') {
     const current = sectionMap.get(keyOf(route.chapterId, route.sectionId));
     const prose = app.querySelector('.section-prose');
@@ -375,6 +387,7 @@ document.addEventListener('click', event => {
     heading?.focus({preventScroll:true});
     heading?.scrollIntoView({block:'start',behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'});
   }
+  else if (action === 'qa-open' || action === 'qa-close') { app.querySelectorAll('#qa-list details').forEach(details => { details.open = action === 'qa-open'; }); }
   else if (action === 'toc') { if (route.type === 'reader') tocMode = 'chapter'; openToc(); }
   else if (action === 'close-dialog') button.closest('dialog')?.close();
   else if (action === 'toc-mode') { tocMode = button.dataset.mode; const dialog = button.closest('dialog'); if (dialog) { dialog.querySelector('.toc-tabs').outerHTML = tocTabs(); dialog.querySelector('.toc-body').innerHTML = tocContent(); dialog.querySelector(`[data-mode="${tocMode}"]`)?.focus(); } else { app.querySelector('.desktop-toc .toc-tabs').outerHTML = tocTabs(); app.querySelector('.desktop-toc .toc-body').innerHTML = tocContent(); app.querySelector(`.desktop-toc [data-mode="${tocMode}"]`)?.focus(); } }
@@ -391,6 +404,7 @@ document.addEventListener('click', event => {
   else if (action === 'zoom-out') changeZoom(-0.5);
 });
 document.addEventListener('input', event => {
+  if (event.target.id === 'qa-search') { qaQuery = event.target.value; refreshInterview(); }
   if (event.target.id === 'search') { query = event.target.value; clearTimeout(searchTimer); searchTimer = setTimeout(refreshHome, 120); }
   if (event.target.dataset.setting) {
     const setting = event.target.dataset.setting;
@@ -398,11 +412,11 @@ document.addEventListener('input', event => {
     const output = document.querySelector(setting === 'fontSize' ? '#font-output' : '#line-output'); if (output && setting !== 'theme') output.textContent = setting === 'fontSize' ? `${progress.settings.fontSize}px` : progress.settings.lineHeight.toFixed(1);
   }
 });
-document.addEventListener('change', event => { if (event.target.id === 'import-file') { importProgress(event.target.files?.[0]); event.target.value = ''; } });
+document.addEventListener('change', event => { if (event.target.id === 'qa-level') { qaLevel = event.target.value; refreshInterview(); } if (event.target.id === 'qa-focus') { qaFocus = event.target.checked; refreshInterview(); } if (event.target.id === 'import-file') { importProgress(event.target.files?.[0]); event.target.value = ''; } });
 document.addEventListener('keydown', event => {
   const image = event.target.closest?.('.section-prose img');
   if (image && ['Enter', ' '].includes(event.key)) { event.preventDefault(); openImage(image); }
-  if (event.key === '/' && !event.metaKey && !event.ctrlKey && !/INPUT|TEXTAREA|SELECT/.test(event.target.tagName) && !dialogRoot.querySelector('dialog[open]')) { const search = document.querySelector('#search'); if (search) { event.preventDefault(); search.focus(); } }
+  if (event.key === '/' && !event.metaKey && !event.ctrlKey && !/INPUT|TEXTAREA|SELECT/.test(event.target.tagName) && !dialogRoot.querySelector('dialog[open]')) { const search = document.querySelector(route.type === 'interview' ? '#qa-search' : '#search'); if (search) { event.preventDefault(); search.focus(); } }
 });
 window.addEventListener('hashchange', () => { closeDialogs(); renderRoute(); });
 window.addEventListener('scroll', () => { if (scrollLocked || route.type !== 'reader') return; clearTimeout(scrollTimer); scrollTimer = setTimeout(saveScroll, 350); }, { passive: true });
@@ -416,6 +430,9 @@ async function boot() {
     const response = await fetch(new URL('./data.json', document.baseURI));
     if (!response.ok) throw new Error(`자료를 불러오지 못했습니다 (${response.status}).`);
     data = await response.json();
+    const qaResponse = await fetch(new URL('./interview-qa.json', document.baseURI));
+    if (!qaResponse.ok) throw new Error('면접 자료를 불러오지 못했습니다. 새로고침해 주세요.');
+    interviewBank = validateInterviewBank(await qaResponse.json());
     if (!Array.isArray(data.chapters) || !data.chapters.length) throw new Error('단원 데이터 형식이 올바르지 않습니다.');
     chapterMap = new Map(); sectionMap = new Map(); orderedSections = [];
     for (const chapter of data.chapters) {

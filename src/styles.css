@@ -30,6 +30,52 @@
 @media print{.section-prose strong,.section-prose .study-emphasis,.section-prose .study-complexity{color:#000}.section-prose .study-emphasis,.section-prose .study-complexity{background:none}.section-prose .math-display{break-inside:avoid}}
 
 /* Structured textbook sections: overview, worked examples, conditions, explanation. */
+.qa-start-link{margin:0 0 20px;font-size:14px}
+.qa-main{max-width:980px;margin:0 auto;padding:44px 32px 100px;min-width:0}
+.qa-back{display:inline-block;margin-bottom:30px;color:var(--muted);font-size:14px}
+.qa-main h1{font-size:40px;line-height:1.35;letter-spacing:-1.5px;margin:8px 0 20px}
+.qa-intro{font-size:16px;line-height:1.9;color:var(--muted);margin-bottom:24px}
+.qa-guide{padding:18px 22px;border:1px solid var(--line);border-radius:12px;background:var(--surface);font-size:14px;line-height:1.9}
+.qa-guide summary,.qa-sources>summary{font-weight:700;cursor:pointer;min-height:28px;color:var(--study-key)}
+.qa-topic-nav{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 20px}
+.qa-topic-nav a{padding:10px 14px;border:1px solid var(--line);border-radius:9px;font-size:13px;color:var(--muted);text-decoration:none;min-height:40px;display:flex;align-items:center}
+.qa-topic-nav a[aria-current=page]{color:var(--study-key);background:var(--study-key-bg);border-color:var(--teal);font-weight:700}
+.qa-controls{display:flex;align-items:flex-end;gap:16px;flex-wrap:wrap}
+.qa-controls label{display:flex;flex-direction:column;gap:7px;font-size:12px;color:var(--muted)}
+.qa-controls .qa-search-label{flex:1;min-width:200px}
+.qa-controls input[type=search],.qa-controls select{font:inherit;font-size:15px;min-height:44px;border:1px solid var(--line);border-radius:8px;padding:10px 12px;background:var(--surface);color:var(--ink);min-width:0;width:100%}
+.qa-controls .qa-focus-filter{display:flex;flex-direction:row;align-items:center;gap:8px;min-height:44px;font-size:14px}
+.qa-focus-filter input{width:18px;height:18px;accent-color:var(--teal)}
+.qa-results-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:20px 0 16px;color:var(--muted);font-size:13px}
+.qa-answer-tools{display:flex;gap:8px;flex-wrap:wrap}
+.qa-answer-tools button{font-size:12px;min-height:36px;border:1px solid var(--line);padding:8px 12px;border-radius:7px;background:var(--surface);color:var(--study-key)}
+.qa-card{margin:16px 0;padding:26px;border:1px solid var(--line);border-radius:12px;background:var(--surface);min-width:0}
+.qa-meta{display:flex;align-items:center;flex-wrap:wrap;gap:9px;font-size:12px;color:var(--muted);margin-bottom:14px}
+.qa-meta>span:first-child{font-weight:750;letter-spacing:.04em}
+.qa-meta .qa-level,.qa-focus{font-size:11px;line-height:1.7;padding:2px 8px;border-radius:5px;background:var(--study-key-bg);color:var(--study-key)}
+.qa-meta .qa-high{background:var(--study-complexity-bg);color:var(--study-complexity)}
+.qa-meta .qa-focus{background:var(--study-caution-bg);color:var(--study-caution)}
+.qa-card h2{font-size:calc(var(--reader-font) * 1.05);line-height:1.7;letter-spacing:-.3px;overflow-wrap:anywhere;word-break:keep-all;margin:0 0 20px;font-weight:750}
+.qa-letter{color:var(--study-key)}
+.qa-answer,.qa-follow{font-size:var(--reader-font);line-height:var(--reader-leading);overflow-wrap:anywhere;word-break:keep-all}
+.qa-answer>summary{color:var(--study-key);font-size:15px;font-weight:750;cursor:pointer;padding:10px 0;min-height:44px}
+.qa-answer ol{padding-left:1.4em;margin:12px 0 20px}
+.qa-answer li{padding-left:.25em;margin:14px 0}
+.qa-answer .study-emphasis,.qa-follow .study-emphasis{font-weight:750}
+.qa-answer .study-keyword,.qa-follow .study-keyword{color:var(--study-key);background:var(--study-key-bg);padding:0 .15em;border-radius:4px}
+.qa-answer .study-caution,.qa-follow .study-caution{color:var(--study-caution);text-decoration:underline;text-underline-offset:.2em}
+.qa-answer .study-complexity,.qa-follow .study-complexity{color:var(--study-complexity);background:var(--study-complexity-bg);padding:0 .2em;border-radius:4px}
+.qa-pitfall{padding:14px 18px;border-left:3px solid var(--study-caution);border-radius:0 8px 8px 0;background:var(--study-caution-bg);font-size:15px;line-height:1.8}
+.qa-pitfall strong{color:var(--study-caution);font-size:12px}.qa-pitfall p{margin:5px 0 0;color:var(--ink)}
+.qa-book-link{font-size:13px;line-height:1.8}.qa-book-link a{color:var(--study-key)}
+.qa-follow{margin-top:10px;padding-top:14px;border-top:1px solid var(--line)}
+.qa-follow summary{cursor:pointer;font-size:15px;line-height:1.85;color:var(--study-complexity);font-weight:650;min-height:44px}
+.qa-follow p{margin:14px 0 0}
+.qa-empty{padding:30px 20px;background:var(--surface);border-radius:10px;font-size:16px;color:var(--muted)}
+.qa-sources{margin-top:30px;padding:20px;border:1px solid var(--line);border-radius:12px;font-size:14px;line-height:1.9;background:var(--surface)}
+.qa-sources section h2{font-size:16px;margin-top:20px}.qa-sources a{color:var(--study-key)}
+@media(max-width:800px){.qa-main{padding:28px 22px calc(100px + env(safe-area-inset-bottom))}.qa-main h1{font-size:33px}.qa-intro{font-size:15px}.qa-card{padding:20px 16px}.qa-card h2{font-size:calc(var(--reader-font) * 1.02)}.qa-guide{padding:15px 16px;font-size:13px}.qa-topic-nav{gap:7px}.qa-topic-nav a{font-size:12px;padding:9px 11px}.qa-controls{gap:10px}.qa-controls .qa-search-label{flex-basis:100%;min-width:0}.qa-controls label[for=qa-level]{flex:1}.qa-controls .qa-focus-filter{flex:1}.qa-follow summary{font-size:15px}.qa-pitfall{padding:12px 14px;font-size:14px}.qa-start-link{font-size:12px;white-space:normal;text-align:center;line-height:1.8}}
+@media print{.qa-topic-nav,.qa-controls,.qa-answer-tools,.qa-back{display:none}.qa-main{max-width:none;padding:0}.qa-card{break-inside:avoid}.qa-answer:not([open])>*:not(summary),.qa-follow:not([open])>*:not(summary){display:block!important}.qa-main h1{font-size:24pt}.qa-card,.qa-answer,.qa-follow{font-size:11pt}.qa-card h2{font-size:12pt}}
 .interview-panel{margin:36px 0;padding:28px;border:1px solid var(--line);border-top:3px solid var(--teal);border-radius:16px;background:var(--surface)}
 .interview-panel h2{margin:6px 0 10px;font-size:25px;line-height:1.5;color:var(--ink)}
 .interview-lead{color:var(--muted);font-size:15px;line-height:1.85;margin:0 0 20px}

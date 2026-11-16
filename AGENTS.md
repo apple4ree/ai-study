@@ -95,3 +95,21 @@ after stripping private source links. Final source sync uses the complete
 - All 42 changed source/deployment paths match local blob SHAs; Pages build
   succeeded. PR #1 is merged. Live home shows the six interview study links.
 - After a worker update, reload once if an existing tab shows the old home.
+
+## Dedicated advanced interview bank (2026-11-16 KST)
+- User explicitly requests about 100 higher-level Q&A questions.
+- content/interview-qa.json is the canonical 100-question bank; do not infer
+  company-specific question frequency or claim these are actual past questions.
+- 18 data structures, 16 algorithms, 16 OS, 16 network, 18 DB, 16 distributed.
+- Each record has 3 answer points, an answered follow-up and an incorrect-answer
+  warning. 38 are medium-high and 62 high, using editorial practice labels.
+- src/interview.js implements validation, search and the Q&A view.
+- Routes: #/interview and #/interview/C03 etc.; no chapter/bookmark route changes.
+- Existing 60 chapter-level questions and every original chapter remain intact.
+- Build copies the bank into docs/interview-qa.json and precaches it with the app.
+- This update should leave docs/data.json unchanged. Verify its SHA before
+  publishing; upload only changed assets and never send that large file through
+  connector arguments. Publish source and matching small docs assets atomically,
+  then verify remote hashes and the live Q&A filters before marking completion.
+- Validation includes 14 tests: exact 100-question completeness, composed filters,
+  safe rendering, built/source equality and the 515 existing chapter routes.
