@@ -100,6 +100,27 @@
       "notes": "Expanded architectural assumptions, convolution sizes and costs, recurrent gradient paths, Q/K/V shapes, causal mask calculations, normalization order, KV cache arithmetic and multi-head costs. Original H2 order and prose preserved.",
       "preparedBranch": "content/2026-11-16-0600",
       "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
+    },
+    "C05": {
+      "status": "prepared-in-draft-pr-not-deployed",
+      "structuredSections": 6,
+      "notes": "Expanded bit interpretation, byte order, array addresses, execution stages, pipeline timing, cache mapping and LRU simulation, and end-to-end parallel speedup calculations. Original H2 order and prose preserved.",
+      "preparedBranch": "content/2026-11-16-0600",
+      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
+    },
+    "C06": {
+      "status": "prepared-in-draft-pr-not-deployed",
+      "structuredSections": 7,
+      "notes": "Expanded process lifecycle, scheduling traces, address-space sharing, page translation, fragmentation, synchronization invariants and file persistence contracts. Original H2 order and prose preserved.",
+      "preparedBranch": "content/2026-11-16-0600",
+      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
+    },
+    "C07": {
+      "status": "prepared-in-draft-pr-not-deployed",
+      "structuredSections": 7,
+      "notes": "Expanded network-layer success boundaries, TCP acknowledgments, byte-stream framing, HTTP method semantics, async execution, queueing calculations and retry/deadline budgets. Original H2 order and prose preserved.",
+      "preparedBranch": "content/2026-11-16-0600",
+      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
     }
   }
 }
