@@ -198,6 +198,27 @@
       "notes": "Expanded low-rank storage, energy/error units, weighted-objective counterexample, executable SVD/PCA/whitening, fixed train transforms, randomized sketch costs and perturbation bounds. Original H2 order and prose preserved.",
       "preparedBranch": "content/2026-11-16-0600",
       "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
+    },
+    "A04": {
+      "status": "prepared-in-draft-pr-not-deployed",
+      "structuredSections": 8,
+      "notes": "Expanded linearization errors, metric-dependent gradient, noncommuting trace counterexample, residual shapes and costs, JVP/VJP, HVP memory and directional check limitations. Original H2 order and prose preserved.",
+      "preparedBranch": "content/2026-11-16-0600",
+      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
+    },
+    "A05": {
+      "status": "prepared-in-draft-pr-not-deployed",
+      "structuredSections": 9,
+      "notes": "Expanded convexity domains and strong convexity distinctions, multiplier signs, valid dual bounds, KKT residual checks, Slater non-necessity, local sensitivity and sum/mean regularization scaling. Original H2 order and prose preserved.",
+      "preparedBranch": "content/2026-11-16-0600",
+      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
+    },
+    "A06": {
+      "status": "prepared-in-draft-pr-not-deployed",
+      "structuredSections": 9,
+      "notes": "Expanded stable step boundaries, iteration/cost accounting, line-search calls, unbiased noise examples, convergence target distinctions, executable prox, simplex projection and Adam moment interpretation. Original H2 order and prose preserved.",
+      "preparedBranch": "content/2026-11-16-0600",
+      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
     }
   }
 }

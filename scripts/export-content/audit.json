@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "chapterCount": 44,
   "figureCount": 37,
-  "solutionCount": 162,
-  "mathExpressionCount": 3033,
+  "solutionCount": 165,
+  "mathExpressionCount": 3054,
   "chapters": [
     {
       "id": "M01",
@@ -268,30 +268,30 @@
     },
     {
       "id": "A04",
-      "sourceCharacters": 10435,
-      "mathExpressions": 163,
-      "codeBlocks": 1,
-      "tables": 0,
+      "sourceCharacters": 13899,
+      "mathExpressions": 179,
+      "codeBlocks": 3,
+      "tables": 2,
       "figures": 1,
-      "solutions": 3
+      "solutions": 4
     },
     {
       "id": "A05",
-      "sourceCharacters": 10355,
-      "mathExpressions": 82,
-      "codeBlocks": 0,
-      "tables": 1,
+      "sourceCharacters": 13597,
+      "mathExpressions": 85,
+      "codeBlocks": 1,
+      "tables": 3,
       "figures": 1,
-      "solutions": 3
+      "solutions": 4
     },
     {
       "id": "A06",
-      "sourceCharacters": 10999,
-      "mathExpressions": 54,
-      "codeBlocks": 0,
-      "tables": 1,
+      "sourceCharacters": 14887,
+      "mathExpressions": 56,
+      "codeBlocks": 3,
+      "tables": 2,
       "figures": 1,
-      "solutions": 3
+      "solutions": 4
     },
     {
       "id": "A07",
