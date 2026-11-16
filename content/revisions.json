@@ -79,6 +79,27 @@
       "preparedBranch": "content/2026-11-16-0600",
       "pullRequest": "https://github.com/apple4ree/ai-study/pull/1",
       "notes": "Expanded MLP tensor shapes and costs, logits/loss contracts, matrix backpropagation, activation gradients, gradient accumulation, dropout expectations, execution modes and numerical checks. Original H2 order and prose preserved."
+    },
+    "C01": {
+      "status": "prepared-in-draft-pr-not-deployed",
+      "structuredSections": 6,
+      "notes": "Expanded argument binding, identity/equality, shallow/deep copy, object/resource lifetimes, C pointer ownership, build failures and Git comparisons with worked examples. Original H2 order and prose preserved.",
+      "preparedBranch": "content/2026-11-16-0600",
+      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
+    },
+    "C02": {
+      "status": "prepared-in-draft-pr-not-deployed",
+      "structuredSections": 6,
+      "notes": "Expanded implication and quantifiers, function/relation properties, induction coverage, loop invariant proof, counting cases, recurrence costs and dependency graphs. Original H2 order and prose preserved.",
+      "preparedBranch": "content/2026-11-16-0600",
+      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
+    },
+    "L05": {
+      "status": "prepared-in-draft-pr-not-deployed",
+      "structuredSections": 8,
+      "notes": "Expanded architectural assumptions, convolution sizes and costs, recurrent gradient paths, Q/K/V shapes, causal mask calculations, normalization order, KV cache arithmetic and multi-head costs. Original H2 order and prose preserved.",
+      "preparedBranch": "content/2026-11-16-0600",
+      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
     }
   }
 }
