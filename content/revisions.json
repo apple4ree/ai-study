@@ -2,10 +2,11 @@
   "updated": "2026-11-16",
   "chapters": {
     "C03": {
-      "status": "cs-interview-expansion-ready",
+      "status": "cs-interview-expansion-deployed",
       "structuredSections": 9,
       "notes": "Preserved published H2 routes and original prose. Added structured reasoning, worked examples, interview answers and follow-up questions. Deployment status is tracked separately.",
-      "interviewQuestions": 12
+      "interviewQuestions": 12,
+      "lastDeployedAt": "2026-11-16T13:13:17.001952+00:00"
     },
     "M02": {
       "status": "structured-expansion-pass-1",
@@ -18,213 +19,242 @@
       "notes": "Added concept/comparison tables, step-by-step numerical examples and explicit assumptions; retained source explanations. Additional depth can still be improved."
     },
     "M03": {
-      "status": "prepared-in-draft-pr-not-deployed",
+      "status": "structured-expansion-deployed",
       "structuredSections": 8,
       "notes": "Expanded derivative assumptions, chain rule, directional derivatives, matrix derivative shapes, reverse-mode costs and numerical integration examples. Original H2 order and prose preserved.",
       "preparedBranch": "content/2026-11-16-0600",
-      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
+      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1",
+      "lastDeployedAt": "2026-11-16T13:13:17.001952+00:00"
     },
     "M04": {
-      "status": "prepared-in-draft-pr-not-deployed",
+      "status": "structured-expansion-deployed",
       "structuredSections": 8,
       "notes": "Expanded event relations, conditional probability, base-rate comparisons, density, moments, joint tables, dependence and limit-theorem examples. Original H2 order and prose preserved.",
       "preparedBranch": "content/2026-11-16-0600",
-      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
+      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1",
+      "lastDeployedAt": "2026-11-16T13:13:17.001952+00:00"
     },
     "C04": {
-      "status": "cs-interview-expansion-ready",
+      "status": "cs-interview-expansion-deployed",
       "structuredSections": 7,
       "notes": "Preserved published H2 routes and original prose. Added structured reasoning, worked examples, interview answers and follow-up questions. Deployment status is tracked separately.",
       "preparedBranch": "content/2026-11-16-0600",
       "pullRequest": "https://github.com/apple4ree/ai-study/pull/1",
-      "interviewQuestions": 8
+      "interviewQuestions": 8,
+      "lastDeployedAt": "2026-11-16T13:13:17.001952+00:00"
     },
     "M05": {
-      "status": "prepared-in-draft-pr-not-deployed",
+      "status": "structured-expansion-deployed",
       "structuredSections": 8,
       "notes": "Expanded estimation targets, bias/variance, likelihood boundaries, confidence intervals, paired comparison, resampling and multiple-testing calculations. Original H2 order and prose preserved.",
       "preparedBranch": "content/2026-11-16-0600",
-      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
+      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1",
+      "lastDeployedAt": "2026-11-16T13:13:17.001952+00:00"
     },
     "L01": {
-      "status": "prepared-in-draft-pr-not-deployed",
+      "status": "structured-expansion-deployed",
       "structuredSections": 6,
       "notes": "Expanded prediction contracts, information availability, preprocessing state, deployment-specific splits, baselines and incomplete-label examples. Original H2 order and prose preserved.",
       "preparedBranch": "content/2026-11-16-0600",
-      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
+      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1",
+      "lastDeployedAt": "2026-11-16T13:13:17.001952+00:00"
     },
     "L02": {
-      "status": "prepared-in-draft-pr-not-deployed",
+      "status": "structured-expansion-deployed",
       "structuredSections": 9,
       "notes": "Expanded model assumptions, regularization, decision costs, Naive Bayes, nearest-neighbor costs, tree impurity, ensembles and PCA. Original H2 order and prose preserved.",
       "preparedBranch": "content/2026-11-16-0600",
-      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
+      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1",
+      "lastDeployedAt": "2026-11-16T13:13:17.001952+00:00"
     },
     "M06": {
-      "status": "prepared-in-draft-pr-not-deployed",
+      "status": "structured-expansion-deployed",
       "structuredSections": 8,
       "preparedBranch": "content/2026-11-16-0600",
       "pullRequest": "https://github.com/apple4ree/ai-study/pull/1",
-      "notes": "Expanded regularized objectives, optimality counterexamples, convexity conclusions, learning-rate convergence, coordinate scaling, batch gradients, optimizer memory and constrained updates. Original H2 order and prose preserved."
+      "notes": "Expanded regularized objectives, optimality counterexamples, convexity conclusions, learning-rate convergence, coordinate scaling, batch gradients, optimizer memory and constrained updates. Original H2 order and prose preserved.",
+      "lastDeployedAt": "2026-11-16T13:13:17.001952+00:00"
     },
     "M07": {
-      "status": "prepared-in-draft-pr-not-deployed",
+      "status": "structured-expansion-deployed",
       "structuredSections": 4,
       "preparedBranch": "content/2026-11-16-0600",
       "pullRequest": "https://github.com/apple4ree/ai-study/pull/1",
       "notes": "Expanded numerical precision, cancellation, finite-difference errors, conditioning, stable log probabilities, entropy, cross-entropy, KL, mutual information and perplexity. Existing H2 titles and numbered H3 topics preserved.",
-      "expandedTopics": 12
+      "expandedTopics": 12,
+      "lastDeployedAt": "2026-11-16T13:13:17.001952+00:00"
     },
     "L04": {
-      "status": "prepared-in-draft-pr-not-deployed",
+      "status": "structured-expansion-deployed",
       "structuredSections": 8,
       "preparedBranch": "content/2026-11-16-0600",
       "pullRequest": "https://github.com/apple4ree/ai-study/pull/1",
-      "notes": "Expanded MLP tensor shapes and costs, logits/loss contracts, matrix backpropagation, activation gradients, gradient accumulation, dropout expectations, execution modes and numerical checks. Original H2 order and prose preserved."
+      "notes": "Expanded MLP tensor shapes and costs, logits/loss contracts, matrix backpropagation, activation gradients, gradient accumulation, dropout expectations, execution modes and numerical checks. Original H2 order and prose preserved.",
+      "lastDeployedAt": "2026-11-16T13:13:17.001952+00:00"
     },
     "C01": {
-      "status": "prepared-in-draft-pr-not-deployed",
+      "status": "structured-expansion-deployed",
       "structuredSections": 6,
       "notes": "Expanded argument binding, identity/equality, shallow/deep copy, object/resource lifetimes, C pointer ownership, build failures and Git comparisons with worked examples. Original H2 order and prose preserved.",
       "preparedBranch": "content/2026-11-16-0600",
-      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
+      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1",
+      "lastDeployedAt": "2026-11-16T13:13:17.001952+00:00"
     },
     "C02": {
-      "status": "prepared-in-draft-pr-not-deployed",
+      "status": "structured-expansion-deployed",
       "structuredSections": 6,
       "notes": "Expanded implication and quantifiers, function/relation properties, induction coverage, loop invariant proof, counting cases, recurrence costs and dependency graphs. Original H2 order and prose preserved.",
       "preparedBranch": "content/2026-11-16-0600",
-      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
+      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1",
+      "lastDeployedAt": "2026-11-16T13:13:17.001952+00:00"
     },
     "L05": {
-      "status": "prepared-in-draft-pr-not-deployed",
+      "status": "structured-expansion-deployed",
       "structuredSections": 8,
       "notes": "Expanded architectural assumptions, convolution sizes and costs, recurrent gradient paths, Q/K/V shapes, causal mask calculations, normalization order, KV cache arithmetic and multi-head costs. Original H2 order and prose preserved.",
       "preparedBranch": "content/2026-11-16-0600",
-      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
+      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1",
+      "lastDeployedAt": "2026-11-16T13:13:17.001952+00:00"
     },
     "C05": {
-      "status": "prepared-in-draft-pr-not-deployed",
+      "status": "structured-expansion-deployed",
       "structuredSections": 6,
       "notes": "Expanded bit interpretation, byte order, array addresses, execution stages, pipeline timing, cache mapping and LRU simulation, and end-to-end parallel speedup calculations. Original H2 order and prose preserved.",
       "preparedBranch": "content/2026-11-16-0600",
-      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
+      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1",
+      "lastDeployedAt": "2026-11-16T13:13:17.001952+00:00"
     },
     "C06": {
-      "status": "cs-interview-expansion-ready",
+      "status": "cs-interview-expansion-deployed",
       "structuredSections": 7,
       "notes": "Preserved published H2 routes and original prose. Added structured reasoning, worked examples, interview answers and follow-up questions. Deployment status is tracked separately.",
       "preparedBranch": "content/2026-11-16-0600",
       "pullRequest": "https://github.com/apple4ree/ai-study/pull/1",
-      "interviewQuestions": 10
+      "interviewQuestions": 10,
+      "lastDeployedAt": "2026-11-16T13:13:17.001952+00:00"
     },
     "C07": {
-      "status": "cs-interview-expansion-ready",
+      "status": "cs-interview-expansion-deployed",
       "structuredSections": 7,
       "notes": "Preserved published H2 routes and original prose. Added structured reasoning, worked examples, interview answers and follow-up questions. Deployment status is tracked separately.",
       "preparedBranch": "content/2026-11-16-0600",
       "pullRequest": "https://github.com/apple4ree/ai-study/pull/1",
-      "interviewQuestions": 10
+      "interviewQuestions": 10,
+      "lastDeployedAt": "2026-11-16T13:13:17.001952+00:00"
     },
     "C08": {
-      "status": "cs-interview-expansion-ready",
+      "status": "cs-interview-expansion-deployed",
       "structuredSections": 7,
       "notes": "Preserved published H2 routes and original prose. Added structured reasoning, worked examples, interview answers and follow-up questions. Deployment status is tracked separately.",
       "preparedBranch": "content/2026-11-16-0600",
       "pullRequest": "https://github.com/apple4ree/ai-study/pull/1",
-      "interviewQuestions": 10
+      "interviewQuestions": 10,
+      "lastDeployedAt": "2026-11-16T13:13:17.001952+00:00"
     },
     "C09": {
-      "status": "prepared-in-draft-pr-not-deployed",
+      "status": "structured-expansion-deployed",
       "structuredSections": 8,
       "notes": "Expanded module and error contracts, test layers, static versus runtime checks, SLI/SLO arithmetic, quantile examples, artifact identity and deployment/probe contracts. Original H2 order and prose preserved.",
       "preparedBranch": "content/2026-11-16-0600",
-      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
+      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1",
+      "lastDeployedAt": "2026-11-16T13:13:17.001952+00:00"
     },
     "C10": {
-      "status": "cs-interview-expansion-ready",
+      "status": "cs-interview-expansion-deployed",
       "structuredSections": 8,
       "notes": "Preserved published H2 routes and original prose. Added structured reasoning, worked examples, interview answers and follow-up questions. Deployment status is tracked separately.",
       "preparedBranch": "content/2026-11-16-0600",
       "pullRequest": "https://github.com/apple4ree/ai-study/pull/1",
-      "interviewQuestions": 10
+      "interviewQuestions": 10,
+      "lastDeployedAt": "2026-11-16T13:13:17.001952+00:00"
     },
     "M01": {
-      "status": "prepared-in-draft-pr-not-deployed",
+      "status": "structured-expansion-deployed",
       "structuredSections": 10,
       "notes": "Expanded expression order, domains, graph transformations, composition/inverses, growth rates, logarithms, aggregation axes, percentage changes, trigonometric waves and formula-to-code checks. Original H2 order and prose preserved.",
       "preparedBranch": "content/2026-11-16-0600",
-      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
+      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1",
+      "lastDeployedAt": "2026-11-16T13:13:17.001952+00:00"
     },
     "L06": {
-      "status": "prepared-in-draft-pr-not-deployed",
+      "status": "structured-expansion-deployed",
       "structuredSections": 8,
       "notes": "Expanded representation metrics, contrastive objectives and costs, reconstruction versus generation, VAE reparameterization and ELBO, GAN losses, diffusion inversion and evaluation tradeoffs. Original H2 order and prose preserved.",
       "preparedBranch": "content/2026-11-16-0600",
-      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
+      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1",
+      "lastDeployedAt": "2026-11-16T13:13:17.001952+00:00"
     },
     "L07": {
-      "status": "prepared-in-draft-pr-not-deployed",
+      "status": "structured-expansion-deployed",
       "structuredSections": 7,
       "notes": "Expanded token likelihood/perplexity, token budgets, label and attention masks, SFT/DPO objectives, LoRA/quantization costs, decoding distributions and KV cache arithmetic. Original H2 order and prose preserved.",
       "preparedBranch": "content/2026-11-16-0600",
-      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
+      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1",
+      "lastDeployedAt": "2026-11-16T13:13:17.001952+00:00"
     },
     "L08": {
-      "status": "prepared-in-draft-pr-not-deployed",
+      "status": "structured-expansion-deployed",
       "structuredSections": 9,
       "notes": "Expanded proposal/execution/completion boundaries, retrieval metrics, RAG failure decomposition, structured-output validation, host tool execution, control flow, memory revision, loop budgets and trace evaluation. Original H2 order and prose preserved.",
       "preparedBranch": "content/2026-11-16-0600",
-      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
+      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1",
+      "lastDeployedAt": "2026-11-16T13:13:17.001952+00:00"
     },
     "L09": {
-      "status": "prepared-in-draft-pr-not-deployed",
+      "status": "structured-expansion-deployed",
       "structuredSections": 8,
       "notes": "Expanded deployment data contracts, reproducibility artifacts, freshness, latency stages, training memory, distributed batch accounting, delayed labels/drift and tensor storage semantics. Original H2 order and prose preserved.",
       "preparedBranch": "content/2026-11-16-0600",
-      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
+      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1",
+      "lastDeployedAt": "2026-11-16T13:13:17.001952+00:00"
     },
     "A01": {
-      "status": "prepared-in-draft-pr-not-deployed",
+      "status": "structured-expansion-deployed",
       "structuredSections": 8,
       "notes": "Expanded weighted projection, metric validity, decomposition residuals, ellipse/condition-number relation, PD counterexamples, power-iteration conditions and costs, norm bounds, covariance regularization. Original H2 order and prose preserved.",
       "preparedBranch": "content/2026-11-16-0600",
-      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
+      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1",
+      "lastDeployedAt": "2026-11-16T13:13:17.001952+00:00"
     },
     "A02": {
-      "status": "prepared-in-draft-pr-not-deployed",
+      "status": "structured-expansion-deployed",
       "structuredSections": 9,
       "notes": "Expanded decomposition selection and dense costs, QR checks and residuals, Cholesky edge cases and reuse, thin SVD memory, pseudoinverse projection, weighted minimum norm and ridge scaling. Original H2 order and prose preserved.",
       "preparedBranch": "content/2026-11-16-0600",
-      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
+      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1",
+      "lastDeployedAt": "2026-11-16T13:13:17.001952+00:00"
     },
     "A03": {
-      "status": "prepared-in-draft-pr-not-deployed",
+      "status": "structured-expansion-deployed",
       "structuredSections": 10,
       "notes": "Expanded low-rank storage, energy/error units, weighted-objective counterexample, executable SVD/PCA/whitening, fixed train transforms, randomized sketch costs and perturbation bounds. Original H2 order and prose preserved.",
       "preparedBranch": "content/2026-11-16-0600",
-      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
+      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1",
+      "lastDeployedAt": "2026-11-16T13:13:17.001952+00:00"
     },
     "A04": {
-      "status": "prepared-in-draft-pr-not-deployed",
+      "status": "structured-expansion-deployed",
       "structuredSections": 8,
       "notes": "Expanded linearization errors, metric-dependent gradient, noncommuting trace counterexample, residual shapes and costs, JVP/VJP, HVP memory and directional check limitations. Original H2 order and prose preserved.",
       "preparedBranch": "content/2026-11-16-0600",
-      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
+      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1",
+      "lastDeployedAt": "2026-11-16T13:13:17.001952+00:00"
     },
     "A05": {
-      "status": "prepared-in-draft-pr-not-deployed",
+      "status": "structured-expansion-deployed",
       "structuredSections": 9,
       "notes": "Expanded convexity domains and strong convexity distinctions, multiplier signs, valid dual bounds, KKT residual checks, Slater non-necessity, local sensitivity and sum/mean regularization scaling. Original H2 order and prose preserved.",
       "preparedBranch": "content/2026-11-16-0600",
-      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
+      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1",
+      "lastDeployedAt": "2026-11-16T13:13:17.001952+00:00"
     },
     "A06": {
-      "status": "prepared-in-draft-pr-not-deployed",
+      "status": "structured-expansion-deployed",
       "structuredSections": 9,
       "notes": "Expanded stable step boundaries, iteration/cost accounting, line-search calls, unbiased noise examples, convergence target distinctions, executable prox, simplex projection and Adam moment interpretation. Original H2 order and prose preserved.",
       "preparedBranch": "content/2026-11-16-0600",
-      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
+      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1",
+      "lastDeployedAt": "2026-11-16T13:13:17.001952+00:00"
     }
   }
 }

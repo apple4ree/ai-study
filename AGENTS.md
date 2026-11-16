@@ -88,7 +88,10 @@ after stripping private source links. Final source sync uses the complete
   baseline in ignored work/cs-before-changes for audit; do not publish work/.
 - Do not upload generated data.json through create_blob or print it in chat.
   Use the logged-in Chrome native file chooser, then verify remote blob SHA.
-- Validation: 10 existing tests; 4,275 Python differential/invariant checks;
+- Validation: 11 existing tests; 4,275 Python differential/invariant checks;
   SQL compound-index and conditional-stock-update examples.
-- Deployment is pending until the generated docs/data.json and docs/sw.js
-  plus matching docs/src files are uploaded and the live home/reader verified.
+- Source merge commit: 03fac7cd964c718b61d035244eb128e5a699348c.
+- Generated-file commit: 7ce3ffefd75f6f48dc800fb79a8a99cbee19ae67.
+- All 42 changed source/deployment paths match local blob SHAs; Pages build
+  succeeded. PR #1 is merged. Live home shows the six interview study links.
+- After a worker update, reload once if an existing tab shows the old home.
