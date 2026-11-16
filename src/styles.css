@@ -30,6 +30,21 @@
 @media print{.section-prose strong,.section-prose .study-emphasis,.section-prose .study-complexity{color:#000}.section-prose .study-emphasis,.section-prose .study-complexity{background:none}.section-prose .math-display{break-inside:avoid}}
 
 /* Structured textbook sections: overview, worked examples, conditions, explanation. */
+.interview-panel{margin:36px 0;padding:28px;border:1px solid var(--line);border-top:3px solid var(--teal);border-radius:16px;background:var(--surface)}
+.interview-panel h2{margin:6px 0 10px;font-size:25px;line-height:1.5;color:var(--ink)}
+.interview-lead{color:var(--muted);font-size:15px;line-height:1.85;margin:0 0 20px}
+.interview-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.interview-card{display:flex;flex-direction:column;min-width:0;gap:10px;border:1px solid var(--line);border-radius:10px;padding:18px;background:var(--surface-2);text-decoration:none;color:var(--ink)}
+.interview-card:hover{border-color:var(--teal)}
+.interview-card>strong{font-size:17px;color:var(--study-key)}
+.interview-card>span:not(.eyebrow){font-size:13px;line-height:1.7;overflow-wrap:anywhere}
+.interview-card .interview-go{display:flex;align-items:center;gap:6px;margin-top:auto;padding-top:4px;font-weight:700;color:var(--study-key)}
+.interview-go svg{width:15px;height:15px}
+.interview-plan{margin-top:22px;color:var(--muted);font-size:14px;line-height:1.9}
+.interview-plan summary{cursor:pointer;color:var(--study-key);font-weight:700;min-height:36px}
+.interview-plan ol{padding-left:24px}.interview-plan li{margin:8px 0}.interview-plan p{font-size:12px;margin:12px 0 0}
+@media(max-width:800px){.interview-panel{padding:20px 16px;margin:26px 0}.interview-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.interview-card{padding:14px 11px}.interview-card>strong{font-size:16px}.interview-card>span:not(.eyebrow){font-size:12px}.interview-card .eyebrow{font-size:9px}.interview-lead{font-size:14px}.interview-plan{font-size:13px}}
+@media(max-width:360px){.interview-grid{grid-template-columns:minmax(0,1fr)}}
 .lesson-outline{margin:0 0 1.5em;padding:18px 20px;border:1px solid var(--line);border-radius:12px;background:var(--surface-2)}
 .section-prose .lesson-outline-title{margin:0 0 10px;font-size:.65em;font-weight:750;color:var(--muted);letter-spacing:0}
 .lesson-outline-links{display:flex;flex-wrap:wrap;gap:8px}

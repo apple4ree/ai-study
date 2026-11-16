@@ -2,9 +2,10 @@
   "updated": "2026-11-16",
   "chapters": {
     "C03": {
-      "status": "structured-expansion-pass-1",
+      "status": "cs-interview-expansion-ready",
       "structuredSections": 9,
-      "notes": "Added concept/comparison tables, step-by-step numerical examples and explicit assumptions; retained source explanations. Additional depth can still be improved."
+      "notes": "Preserved published H2 routes and original prose. Added structured reasoning, worked examples, interview answers and follow-up questions. Deployment status is tracked separately.",
+      "interviewQuestions": 12
     },
     "M02": {
       "status": "structured-expansion-pass-1",
@@ -31,11 +32,12 @@
       "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
     },
     "C04": {
-      "status": "prepared-in-draft-pr-not-deployed",
+      "status": "cs-interview-expansion-ready",
       "structuredSections": 7,
-      "notes": "Expanded invariants, sorting tradeoffs, binary-search traces, sliding-window counterexamples, greedy conditions, dynamic programming and graph costs. Original H2 order and prose preserved.",
+      "notes": "Preserved published H2 routes and original prose. Added structured reasoning, worked examples, interview answers and follow-up questions. Deployment status is tracked separately.",
       "preparedBranch": "content/2026-11-16-0600",
-      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
+      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1",
+      "interviewQuestions": 8
     },
     "M05": {
       "status": "prepared-in-draft-pr-not-deployed",
@@ -109,25 +111,28 @@
       "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
     },
     "C06": {
-      "status": "prepared-in-draft-pr-not-deployed",
+      "status": "cs-interview-expansion-ready",
       "structuredSections": 7,
-      "notes": "Expanded process lifecycle, scheduling traces, address-space sharing, page translation, fragmentation, synchronization invariants and file persistence contracts. Original H2 order and prose preserved.",
+      "notes": "Preserved published H2 routes and original prose. Added structured reasoning, worked examples, interview answers and follow-up questions. Deployment status is tracked separately.",
       "preparedBranch": "content/2026-11-16-0600",
-      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
+      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1",
+      "interviewQuestions": 10
     },
     "C07": {
-      "status": "prepared-in-draft-pr-not-deployed",
+      "status": "cs-interview-expansion-ready",
       "structuredSections": 7,
-      "notes": "Expanded network-layer success boundaries, TCP acknowledgments, byte-stream framing, HTTP method semantics, async execution, queueing calculations and retry/deadline budgets. Original H2 order and prose preserved.",
+      "notes": "Preserved published H2 routes and original prose. Added structured reasoning, worked examples, interview answers and follow-up questions. Deployment status is tracked separately.",
       "preparedBranch": "content/2026-11-16-0600",
-      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
+      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1",
+      "interviewQuestions": 10
     },
     "C08": {
-      "status": "prepared-in-draft-pr-not-deployed",
+      "status": "cs-interview-expansion-ready",
       "structuredSections": 7,
-      "notes": "Expanded schema constraints, LEFT JOIN counts, historical snapshots versus normalization, composite indexes, join cost and output sizes, lost updates and WAL/recovery boundaries. Original H2 order and prose preserved.",
+      "notes": "Preserved published H2 routes and original prose. Added structured reasoning, worked examples, interview answers and follow-up questions. Deployment status is tracked separately.",
       "preparedBranch": "content/2026-11-16-0600",
-      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
+      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1",
+      "interviewQuestions": 10
     },
     "C09": {
       "status": "prepared-in-draft-pr-not-deployed",
@@ -137,11 +142,12 @@
       "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
     },
     "C10": {
-      "status": "prepared-in-draft-pr-not-deployed",
+      "status": "cs-interview-expansion-ready",
       "structuredSections": 8,
-      "notes": "Expanded partial-failure timelines, replication acknowledgments, consistency contracts, quorum intersections, shard movement, delivery acknowledgments, outbox/deduplication boundaries and backpressure calculations. Original H2 order and prose preserved.",
+      "notes": "Preserved published H2 routes and original prose. Added structured reasoning, worked examples, interview answers and follow-up questions. Deployment status is tracked separately.",
       "preparedBranch": "content/2026-11-16-0600",
-      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
+      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1",
+      "interviewQuestions": 10
     },
     "M01": {
       "status": "prepared-in-draft-pr-not-deployed",

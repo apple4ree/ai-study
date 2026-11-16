@@ -2,17 +2,17 @@
   "schemaVersion": 1,
   "chapterCount": 44,
   "figureCount": 37,
-  "solutionCount": 132,
-  "mathExpressionCount": 2747,
+  "solutionCount": 165,
+  "mathExpressionCount": 3054,
   "chapters": [
     {
       "id": "M01",
-      "sourceCharacters": 11338,
-      "mathExpressions": 208,
-      "codeBlocks": 1,
-      "tables": 4,
+      "sourceCharacters": 15469,
+      "mathExpressions": 213,
+      "codeBlocks": 3,
+      "tables": 11,
       "figures": 1,
-      "solutions": 3
+      "solutions": 4
     },
     {
       "id": "M02",
@@ -25,156 +25,156 @@
     },
     {
       "id": "M03",
-      "sourceCharacters": 8096,
-      "mathExpressions": 145,
-      "codeBlocks": 0,
-      "tables": 0,
+      "sourceCharacters": 12010,
+      "mathExpressions": 220,
+      "codeBlocks": 1,
+      "tables": 4,
       "figures": 1,
-      "solutions": 3
+      "solutions": 4
     },
     {
       "id": "M04",
-      "sourceCharacters": 8464,
-      "mathExpressions": 76,
-      "codeBlocks": 0,
-      "tables": 1,
+      "sourceCharacters": 12582,
+      "mathExpressions": 109,
+      "codeBlocks": 1,
+      "tables": 6,
       "figures": 1,
-      "solutions": 3
+      "solutions": 4
     },
     {
       "id": "M05",
-      "sourceCharacters": 8463,
-      "mathExpressions": 48,
-      "codeBlocks": 0,
-      "tables": 1,
+      "sourceCharacters": 13511,
+      "mathExpressions": 71,
+      "codeBlocks": 2,
+      "tables": 7,
       "figures": 1,
-      "solutions": 3
+      "solutions": 5
     },
     {
       "id": "M06",
-      "sourceCharacters": 8836,
-      "mathExpressions": 94,
-      "codeBlocks": 0,
-      "tables": 0,
+      "sourceCharacters": 13090,
+      "mathExpressions": 115,
+      "codeBlocks": 1,
+      "tables": 5,
       "figures": 1,
-      "solutions": 3
+      "solutions": 4
     },
     {
       "id": "M07",
-      "sourceCharacters": 9941,
-      "mathExpressions": 62,
-      "codeBlocks": 0,
-      "tables": 0,
+      "sourceCharacters": 14832,
+      "mathExpressions": 83,
+      "codeBlocks": 1,
+      "tables": 5,
       "figures": 1,
-      "solutions": 3
+      "solutions": 5
     },
     {
       "id": "C01",
-      "sourceCharacters": 6879,
+      "sourceCharacters": 10936,
       "mathExpressions": 0,
-      "codeBlocks": 3,
-      "tables": 0,
+      "codeBlocks": 6,
+      "tables": 6,
       "figures": 0,
-      "solutions": 3
+      "solutions": 4
     },
     {
       "id": "C02",
-      "sourceCharacters": 6740,
-      "mathExpressions": 0,
-      "codeBlocks": 2,
-      "tables": 1,
+      "sourceCharacters": 10590,
+      "mathExpressions": 8,
+      "codeBlocks": 3,
+      "tables": 6,
       "figures": 0,
-      "solutions": 3
+      "solutions": 5
     },
     {
       "id": "C03",
-      "sourceCharacters": 16441,
+      "sourceCharacters": 25514,
       "mathExpressions": 0,
-      "codeBlocks": 1,
-      "tables": 15,
+      "codeBlocks": 3,
+      "tables": 19,
       "figures": 1,
       "solutions": 3
     },
     {
       "id": "C04",
-      "sourceCharacters": 6956,
-      "mathExpressions": 0,
-      "codeBlocks": 2,
-      "tables": 1,
+      "sourceCharacters": 14787,
+      "mathExpressions": 3,
+      "codeBlocks": 4,
+      "tables": 7,
       "figures": 0,
-      "solutions": 3
+      "solutions": 4
     },
     {
       "id": "C05",
-      "sourceCharacters": 7369,
-      "mathExpressions": 0,
-      "codeBlocks": 1,
-      "tables": 0,
+      "sourceCharacters": 10929,
+      "mathExpressions": 5,
+      "codeBlocks": 3,
+      "tables": 5,
       "figures": 1,
-      "solutions": 3
+      "solutions": 4
     },
     {
       "id": "C06",
-      "sourceCharacters": 8534,
+      "sourceCharacters": 17260,
       "mathExpressions": 0,
-      "codeBlocks": 2,
-      "tables": 0,
+      "codeBlocks": 3,
+      "tables": 8,
       "figures": 1,
-      "solutions": 3
+      "solutions": 4
     },
     {
       "id": "C07",
-      "sourceCharacters": 7259,
-      "mathExpressions": 0,
-      "codeBlocks": 2,
-      "tables": 0,
+      "sourceCharacters": 15975,
+      "mathExpressions": 1,
+      "codeBlocks": 3,
+      "tables": 8,
       "figures": 1,
-      "solutions": 3
+      "solutions": 4
     },
     {
       "id": "C08",
-      "sourceCharacters": 7402,
+      "sourceCharacters": 17059,
       "mathExpressions": 0,
-      "codeBlocks": 4,
-      "tables": 0,
+      "codeBlocks": 8,
+      "tables": 10,
       "figures": 0,
-      "solutions": 3
+      "solutions": 4
     },
     {
       "id": "C09",
-      "sourceCharacters": 8015,
-      "mathExpressions": 0,
-      "codeBlocks": 3,
-      "tables": 0,
+      "sourceCharacters": 12946,
+      "mathExpressions": 1,
+      "codeBlocks": 5,
+      "tables": 7,
       "figures": 0,
-      "solutions": 3
+      "solutions": 4
     },
     {
       "id": "C10",
-      "sourceCharacters": 8435,
+      "sourceCharacters": 18765,
       "mathExpressions": 0,
-      "codeBlocks": 1,
-      "tables": 1,
+      "codeBlocks": 3,
+      "tables": 11,
       "figures": 1,
-      "solutions": 3
+      "solutions": 4
     },
     {
       "id": "L01",
-      "sourceCharacters": 6789,
-      "mathExpressions": 0,
-      "codeBlocks": 1,
-      "tables": 0,
+      "sourceCharacters": 10544,
+      "mathExpressions": 1,
+      "codeBlocks": 2,
+      "tables": 6,
       "figures": 1,
-      "solutions": 3
+      "solutions": 5
     },
     {
       "id": "L02",
-      "sourceCharacters": 8259,
-      "mathExpressions": 3,
-      "codeBlocks": 0,
-      "tables": 1,
+      "sourceCharacters": 13678,
+      "mathExpressions": 28,
+      "codeBlocks": 1,
+      "tables": 8,
       "figures": 1,
-      "solutions": 3
+      "solutions": 4
     },
     {
       "id": "L03",
@@ -187,111 +187,111 @@
     },
     {
       "id": "L04",
-      "sourceCharacters": 7955,
-      "mathExpressions": 1,
-      "codeBlocks": 1,
-      "tables": 0,
+      "sourceCharacters": 12644,
+      "mathExpressions": 18,
+      "codeBlocks": 3,
+      "tables": 6,
       "figures": 1,
-      "solutions": 3
+      "solutions": 4
     },
     {
       "id": "L05",
-      "sourceCharacters": 7679,
-      "mathExpressions": 1,
-      "codeBlocks": 0,
-      "tables": 0,
+      "sourceCharacters": 12851,
+      "mathExpressions": 9,
+      "codeBlocks": 1,
+      "tables": 7,
       "figures": 1,
-      "solutions": 3
+      "solutions": 4
     },
     {
       "id": "L06",
-      "sourceCharacters": 7506,
-      "mathExpressions": 1,
-      "codeBlocks": 0,
-      "tables": 1,
+      "sourceCharacters": 11575,
+      "mathExpressions": 5,
+      "codeBlocks": 1,
+      "tables": 5,
       "figures": 0,
-      "solutions": 3
+      "solutions": 4
     },
     {
       "id": "L07",
-      "sourceCharacters": 7538,
-      "mathExpressions": 1,
-      "codeBlocks": 1,
-      "tables": 0,
+      "sourceCharacters": 11617,
+      "mathExpressions": 4,
+      "codeBlocks": 3,
+      "tables": 5,
       "figures": 1,
-      "solutions": 3
+      "solutions": 4
     },
     {
       "id": "L08",
-      "sourceCharacters": 7435,
-      "mathExpressions": 0,
-      "codeBlocks": 1,
-      "tables": 1,
+      "sourceCharacters": 12178,
+      "mathExpressions": 1,
+      "codeBlocks": 3,
+      "tables": 9,
       "figures": 0,
-      "solutions": 3
+      "solutions": 4
     },
     {
       "id": "L09",
-      "sourceCharacters": 7730,
+      "sourceCharacters": 12369,
       "mathExpressions": 0,
-      "codeBlocks": 0,
-      "tables": 0,
+      "codeBlocks": 1,
+      "tables": 8,
       "figures": 1,
-      "solutions": 3
+      "solutions": 4
     },
     {
       "id": "A01",
-      "sourceCharacters": 10228,
-      "mathExpressions": 108,
-      "codeBlocks": 0,
-      "tables": 1,
+      "sourceCharacters": 13858,
+      "mathExpressions": 124,
+      "codeBlocks": 1,
+      "tables": 3,
       "figures": 1,
-      "solutions": 3
+      "solutions": 4
     },
     {
       "id": "A02",
-      "sourceCharacters": 9933,
-      "mathExpressions": 136,
-      "codeBlocks": 0,
-      "tables": 1,
+      "sourceCharacters": 13948,
+      "mathExpressions": 146,
+      "codeBlocks": 3,
+      "tables": 3,
       "figures": 1,
-      "solutions": 3
+      "solutions": 4
     },
     {
       "id": "A03",
-      "sourceCharacters": 11416,
-      "mathExpressions": 87,
-      "codeBlocks": 0,
-      "tables": 0,
+      "sourceCharacters": 15189,
+      "mathExpressions": 92,
+      "codeBlocks": 2,
+      "tables": 1,
       "figures": 1,
-      "solutions": 3
+      "solutions": 4
     },
     {
       "id": "A04",
-      "sourceCharacters": 10435,
-      "mathExpressions": 163,
-      "codeBlocks": 1,
-      "tables": 0,
+      "sourceCharacters": 13899,
+      "mathExpressions": 179,
+      "codeBlocks": 3,
+      "tables": 2,
       "figures": 1,
-      "solutions": 3
+      "solutions": 4
     },
     {
       "id": "A05",
-      "sourceCharacters": 10355,
-      "mathExpressions": 82,
-      "codeBlocks": 0,
-      "tables": 1,
+      "sourceCharacters": 13597,
+      "mathExpressions": 85,
+      "codeBlocks": 1,
+      "tables": 3,
       "figures": 1,
-      "solutions": 3
+      "solutions": 4
     },
     {
       "id": "A06",
-      "sourceCharacters": 10999,
-      "mathExpressions": 54,
-      "codeBlocks": 0,
-      "tables": 1,
+      "sourceCharacters": 14887,
+      "mathExpressions": 56,
+      "codeBlocks": 3,
+      "tables": 2,
       "figures": 1,
-      "solutions": 3
+      "solutions": 4
     },
     {
       "id": "A07",

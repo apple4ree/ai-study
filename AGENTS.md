@@ -76,3 +76,19 @@ after stripping private source links. Final source sync uses the complete
   route the full body through create_blob. Reuse remote hashes for other assets.
 - Hourly follow-ups are scheduled at 06:00 through 14:00; final QA at 14:45.
   After 14:30, finish pending validation and publishing rather than new rewrites.
+
+## CS interview expansion (2026-11-16 KST)
+- Current user explicitly requests substantive CS interview preparation and publication.
+- C03/C04/C06/C07/C08/C10 include 60 interview answers with follow-up questions,
+  worked examples and explicit assumptions. C03 adds LRU implementation, balanced
+  trees, Fenwick/segment trees and Bloom filters.
+- Home interview panel links to each chapter's existing core-summary section.
+- Imported all 29 previously prepared chapter revisions from PR #1 before editing.
+- Keep all 515 section routes and original prose. Preserve the six-chapter
+  baseline in ignored work/cs-before-changes for audit; do not publish work/.
+- Do not upload generated data.json through create_blob or print it in chat.
+  Use the logged-in Chrome native file chooser, then verify remote blob SHA.
+- Validation: 10 existing tests; 4,275 Python differential/invariant checks;
+  SQL compound-index and conditional-stock-update examples.
+- Deployment is pending until the generated docs/data.json and docs/sw.js
+  plus matching docs/src files are uploaded and the live home/reader verified.
