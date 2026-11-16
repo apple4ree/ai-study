@@ -142,6 +142,41 @@
       "notes": "Expanded partial-failure timelines, replication acknowledgments, consistency contracts, quorum intersections, shard movement, delivery acknowledgments, outbox/deduplication boundaries and backpressure calculations. Original H2 order and prose preserved.",
       "preparedBranch": "content/2026-11-16-0600",
       "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
+    },
+    "M01": {
+      "status": "prepared-in-draft-pr-not-deployed",
+      "structuredSections": 10,
+      "notes": "Expanded expression order, domains, graph transformations, composition/inverses, growth rates, logarithms, aggregation axes, percentage changes, trigonometric waves and formula-to-code checks. Original H2 order and prose preserved.",
+      "preparedBranch": "content/2026-11-16-0600",
+      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
+    },
+    "L06": {
+      "status": "prepared-in-draft-pr-not-deployed",
+      "structuredSections": 8,
+      "notes": "Expanded representation metrics, contrastive objectives and costs, reconstruction versus generation, VAE reparameterization and ELBO, GAN losses, diffusion inversion and evaluation tradeoffs. Original H2 order and prose preserved.",
+      "preparedBranch": "content/2026-11-16-0600",
+      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
+    },
+    "L07": {
+      "status": "prepared-in-draft-pr-not-deployed",
+      "structuredSections": 7,
+      "notes": "Expanded token likelihood/perplexity, token budgets, label and attention masks, SFT/DPO objectives, LoRA/quantization costs, decoding distributions and KV cache arithmetic. Original H2 order and prose preserved.",
+      "preparedBranch": "content/2026-11-16-0600",
+      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
+    },
+    "L08": {
+      "status": "prepared-in-draft-pr-not-deployed",
+      "structuredSections": 9,
+      "notes": "Expanded proposal/execution/completion boundaries, retrieval metrics, RAG failure decomposition, structured-output validation, host tool execution, control flow, memory revision, loop budgets and trace evaluation. Original H2 order and prose preserved.",
+      "preparedBranch": "content/2026-11-16-0600",
+      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
+    },
+    "L09": {
+      "status": "prepared-in-draft-pr-not-deployed",
+      "structuredSections": 8,
+      "notes": "Expanded deployment data contracts, reproducibility artifacts, freshness, latency stages, training memory, distributed batch accounting, delayed labels/drift and tensor storage semantics. Original H2 order and prose preserved.",
+      "preparedBranch": "content/2026-11-16-0600",
+      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
     }
   }
 }

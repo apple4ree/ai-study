@@ -2,17 +2,17 @@
   "schemaVersion": 1,
   "chapterCount": 44,
   "figureCount": 37,
-  "solutionCount": 154,
-  "mathExpressionCount": 2989,
+  "solutionCount": 159,
+  "mathExpressionCount": 3002,
   "chapters": [
     {
       "id": "M01",
-      "sourceCharacters": 11338,
-      "mathExpressions": 208,
-      "codeBlocks": 1,
-      "tables": 4,
+      "sourceCharacters": 15469,
+      "mathExpressions": 213,
+      "codeBlocks": 3,
+      "tables": 11,
       "figures": 1,
-      "solutions": 3
+      "solutions": 4
     },
     {
       "id": "M02",
@@ -205,39 +205,39 @@
     },
     {
       "id": "L06",
-      "sourceCharacters": 7506,
-      "mathExpressions": 1,
-      "codeBlocks": 0,
-      "tables": 1,
+      "sourceCharacters": 11575,
+      "mathExpressions": 5,
+      "codeBlocks": 1,
+      "tables": 5,
       "figures": 0,
-      "solutions": 3
+      "solutions": 4
     },
     {
       "id": "L07",
-      "sourceCharacters": 7538,
-      "mathExpressions": 1,
-      "codeBlocks": 1,
-      "tables": 0,
+      "sourceCharacters": 11617,
+      "mathExpressions": 4,
+      "codeBlocks": 3,
+      "tables": 5,
       "figures": 1,
-      "solutions": 3
+      "solutions": 4
     },
     {
       "id": "L08",
-      "sourceCharacters": 7435,
-      "mathExpressions": 0,
-      "codeBlocks": 1,
-      "tables": 1,
+      "sourceCharacters": 12178,
+      "mathExpressions": 1,
+      "codeBlocks": 3,
+      "tables": 9,
       "figures": 0,
-      "solutions": 3
+      "solutions": 4
     },
     {
       "id": "L09",
-      "sourceCharacters": 7730,
+      "sourceCharacters": 12369,
       "mathExpressions": 0,
-      "codeBlocks": 0,
-      "tables": 0,
+      "codeBlocks": 1,
+      "tables": 8,
       "figures": 1,
-      "solutions": 3
+      "solutions": 4
     },
     {
       "id": "A01",
