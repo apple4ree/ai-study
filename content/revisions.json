@@ -177,6 +177,27 @@
       "notes": "Expanded deployment data contracts, reproducibility artifacts, freshness, latency stages, training memory, distributed batch accounting, delayed labels/drift and tensor storage semantics. Original H2 order and prose preserved.",
       "preparedBranch": "content/2026-11-16-0600",
       "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
+    },
+    "A01": {
+      "status": "prepared-in-draft-pr-not-deployed",
+      "structuredSections": 8,
+      "notes": "Expanded weighted projection, metric validity, decomposition residuals, ellipse/condition-number relation, PD counterexamples, power-iteration conditions and costs, norm bounds, covariance regularization. Original H2 order and prose preserved.",
+      "preparedBranch": "content/2026-11-16-0600",
+      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
+    },
+    "A02": {
+      "status": "prepared-in-draft-pr-not-deployed",
+      "structuredSections": 9,
+      "notes": "Expanded decomposition selection and dense costs, QR checks and residuals, Cholesky edge cases and reuse, thin SVD memory, pseudoinverse projection, weighted minimum norm and ridge scaling. Original H2 order and prose preserved.",
+      "preparedBranch": "content/2026-11-16-0600",
+      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
+    },
+    "A03": {
+      "status": "prepared-in-draft-pr-not-deployed",
+      "structuredSections": 10,
+      "notes": "Expanded low-rank storage, energy/error units, weighted-objective counterexample, executable SVD/PCA/whitening, fixed train transforms, randomized sketch costs and perturbation bounds. Original H2 order and prose preserved.",
+      "preparedBranch": "content/2026-11-16-0600",
+      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
     }
   }
 }
