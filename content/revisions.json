@@ -121,6 +121,27 @@
       "notes": "Expanded network-layer success boundaries, TCP acknowledgments, byte-stream framing, HTTP method semantics, async execution, queueing calculations and retry/deadline budgets. Original H2 order and prose preserved.",
       "preparedBranch": "content/2026-11-16-0600",
       "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
+    },
+    "C08": {
+      "status": "prepared-in-draft-pr-not-deployed",
+      "structuredSections": 7,
+      "notes": "Expanded schema constraints, LEFT JOIN counts, historical snapshots versus normalization, composite indexes, join cost and output sizes, lost updates and WAL/recovery boundaries. Original H2 order and prose preserved.",
+      "preparedBranch": "content/2026-11-16-0600",
+      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
+    },
+    "C09": {
+      "status": "prepared-in-draft-pr-not-deployed",
+      "structuredSections": 8,
+      "notes": "Expanded module and error contracts, test layers, static versus runtime checks, SLI/SLO arithmetic, quantile examples, artifact identity and deployment/probe contracts. Original H2 order and prose preserved.",
+      "preparedBranch": "content/2026-11-16-0600",
+      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
+    },
+    "C10": {
+      "status": "prepared-in-draft-pr-not-deployed",
+      "structuredSections": 8,
+      "notes": "Expanded partial-failure timelines, replication acknowledgments, consistency contracts, quorum intersections, shard movement, delivery acknowledgments, outbox/deduplication boundaries and backpressure calculations. Original H2 order and prose preserved.",
+      "preparedBranch": "content/2026-11-16-0600",
+      "pullRequest": "https://github.com/apple4ree/ai-study/pull/1"
     }
   }
 }
