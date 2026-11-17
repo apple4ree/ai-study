@@ -67,8 +67,10 @@ await fs.copyFile(path.join(root,'vendor/katex/LICENSE'),path.join(out,'vendor/k
 await fs.copyFile(path.join(root,'vendor/marked/LICENSE.md'),path.join(out,'vendor/marked-LICENSE.md'));
 const data={version:(audit.lastEditedAt || audit.exportedAt).slice(0,10),updatedAt:audit.lastEditedAt || audit.exportedAt,chapters};
 await fs.writeFile(path.join(out,'data.json'),JSON.stringify(data));
-const interviewBank=JSON.parse(await fs.readFile(path.join(root,'content/interview-qa.json'),'utf8'));
-await fs.writeFile(path.join(out,'interview-qa.json'),JSON.stringify(interviewBank));
+for(const filename of ['interview-qa.json','interview-basic.json']) {
+  const bank=JSON.parse(await fs.readFile(path.join(root,'content',filename),'utf8'));
+  await fs.writeFile(path.join(out,filename),JSON.stringify(bank));
+}
 await fs.writeFile(path.join(out,'.nojekyll'),'');
 async function walk(dir){const files=[];for(const d of await fs.readdir(dir,{withFileTypes:true})){const p=path.join(dir,d.name);if(d.isDirectory())files.push(...await walk(p));else files.push(p);}return files;}
 const files=(await walk(out)).filter(f=>!f.endsWith('/sw.js'));

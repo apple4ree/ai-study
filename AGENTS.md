@@ -113,3 +113,16 @@ after stripping private source links. Final source sync uses the complete
   then verify remote hashes and the live Q&A filters before marking completion.
 - Validation includes 14 tests: exact 100-question completeness, composed filters,
   safe rendering, built/source equality and the 515 existing chapter routes.
+
+## Basic CS + ML/DL interview bank (2026-11-17 KST)
+- User requests an additional basic 100-question bank mixing ML and DL.
+- Canonical file: content/interview-basic.json. Keep advanced bank unchanged.
+- 60 CS questions (10 per existing CS topic), ML 20 (L02), DL 20 (L04).
+- IDs B001-B100, level 기초, 3 answer points, answered follow-up and pitfall.
+- Routes: #/interview/basic and #/interview/basic/L02 etc.
+- Bank switching resets incompatible search/difficulty/focus state.
+- Do not alter existing chapter routes, advanced Q IDs or large docs/data.json.
+- Publish matching source and generated small assets together; verify both banks
+  and the ML/DL filters in the live reader before reporting completion.
+- Validation: 16 tests pass, including basic/advanced bank separation, IDs,
+  all answered follow-ups, topic links and existing reader routes.

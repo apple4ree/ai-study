@@ -12,7 +12,7 @@
 - 홈 화면에 추가할 수 있는 PWA와 오프라인 읽기
 - 학습 기록 내보내기·가져오기
 
-[CS 심화 면접 100문항 바로 열기](https://apple4ree.github.io/ai-study/#/interview)
+[기초 면접 100문항: CS·ML/DL](https://apple4ree.github.io/ai-study/#/interview/basic) · [CS 심화 면접 100문항 바로 열기](https://apple4ree.github.io/ai-study/#/interview)
 
 중상 38문항·상 62문항으로, 각 문항에 질문·3단계 답변·꼬리질문과 답·피할 답변을 제공합니다. 기존 6개 CS 단원의 원리·예제와 60개 기초 연결 질문도 유지합니다.
 

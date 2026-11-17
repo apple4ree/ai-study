@@ -32,8 +32,8 @@ const ICONS = {
 };
 const app = document.querySelector('#app');
 const dialogRoot = document.querySelector('#dialog-root');
-let data, chapterMap, sectionMap, orderedSections, searchIndex, interviewBank;
-let qaQuery = '', qaLevel = 'all', qaFocus = false;
+let data, chapterMap, sectionMap, orderedSections, searchIndex, interviewBank, basicInterviewBank;
+let qaQuery = '', qaLevel = 'all', qaFocus = false, qaActiveBank = 'advanced';
 let progress, route = { type: 'home' }, filter = 'all', query = '', reviewTab = 'confused', tocMode = 'chapter';
 let pendingScroll = null, scrollTimer, searchTimer, toastTimer, scrollLocked = false, storageErrorShown = false;
 let pendingImport = null, readySent = false;
@@ -120,7 +120,8 @@ function parseRoute() {
     const parts = location.hash.replace(/^#\/?/, '').split('/').filter(Boolean).map(decodeURIComponent);
     if (!parts.length) return { type: 'home' };
     if (parts[0] === 'review' && parts.length === 1) return { type: 'review' };
-    if (parts[0] === 'interview' && parts.length <= 2 && (!parts[1] || interviewBank.topics.some(topic => topic.id === parts[1]))) return { type: 'interview', topic: parts[1] || 'all' };
+    if (parts[0] === 'interview' && parts[1] === 'basic' && parts.length <= 3 && (!parts[2] || basicInterviewBank.topics.some(topic => topic.id === parts[2]))) return { type: 'interview', bank: 'basic', topic: parts[2] || 'all' };
+    if (parts[0] === 'interview' && parts.length <= 2 && (!parts[1] || interviewBank.topics.some(topic => topic.id === parts[1]))) return { type: 'interview', bank: 'advanced', topic: parts[1] || 'all' };
     if (parts[0] === 'read' && parts[1]) {
       const chapter = chapterMap.get(parts[1]);
       if (!chapter) return { type: 'missing' };
@@ -154,11 +155,11 @@ function interviewPanel() {
     ['C08', '데이터베이스', '실행 계획·MVCC·write skew·인덱스·복구', 18],
     ['C10', '분산 시스템', 'Raft·quorum·멱등성·fencing·캐시 경쟁', 16],
   ];
-  return `<section class="interview-panel" aria-labelledby="interview-title"><p class="eyebrow">Computer Science · 집중 복습</p><h2 id="interview-title">CS 면접 준비</h2><p class="interview-lead">조건·반례·설계 선택을 묻는 <strong>심화 Q&A 100개</strong>.<br>답변을 가리고 먼저 설명한 뒤 꼬리질문까지 연습하세요.</p><a class="button button-primary qa-start-link" href="#/interview">심화 면접 100문항 모아보기 →</a><div class="interview-grid">${topics.map(([id, title, description, count]) => {
+  return `<section class="interview-panel" aria-labelledby="interview-title"><p class="eyebrow">Computer Science · 집중 복습</p><h2 id="interview-title">면접 준비</h2><p class="interview-lead"><strong>기초 100문항</strong>으로 CS·ML/DL 개념을 확인하고,<br><strong>심화 100문항</strong>으로 조건·반례·설계 판단을 연습하세요.</p><div class="qa-bank-entry"><a class="button button-primary qa-start-link" href="#/interview/basic">기초 · CS/ML/DL 100문항 →</a><a class="button button-secondary qa-start-link" href="#/interview">심화 · CS 100문항 →</a></div><p class="qa-home-topic-note">CS 심화 분야별 바로가기</p><div class="interview-grid">${topics.map(([id, title, description, count]) => {
     const chapter = chapterMap.get(id);
     const section = chapter.sections.find(s => s.title === '핵심 정리');
     return `<a class="interview-card" href="#/interview/${id}"><span class="eyebrow">${id} · ${count}개 질문</span><strong>${title}</strong><span>${description}</span><span class="interview-go">집중 복습 ${icon('right')}</span></a>`;
-  }).join('')}</div><details class="interview-plan"><summary>시간이 없다면 · 4시간 복습 순서</summary><ol><li>자료구조 45분: 해시·배열·힙·LRU를 말로 설명하기</li><li>알고리즘 35분: 이진탐색·BFS·DP의 조건과 비용 확인</li><li>운영체제 40분: 프로세스·스레드·GIL·메모리·잠금 비교</li><li>네트워크 35분: 요청 경로·timeout·중복 재시도 추적</li><li>데이터베이스 35분: 인덱스 선택·SQL·동시 갱신 설명</li><li>분산 시스템 30분: 큐 재전달·멱등성·캐시·부분 실패 정리</li><li>마지막 20분: 답변을 가리고 원리 → 조건 → 예시 → 한계 순서로 말하기</li></ol><p>공개된 CS 요구 역량에 맞춘 연습입니다. 실제 면접 기출이나 출제 빈도를 뜻하지 않습니다.</p></details></section>`;
+  }).join('')}</div><details class="interview-plan"><summary>CS 6개 분야 · 4시간 복습 순서</summary><ol><li>자료구조 45분: 해시·배열·힙·LRU를 말로 설명하기</li><li>알고리즘 35분: 이진탐색·BFS·DP의 조건과 비용 확인</li><li>운영체제 40분: 프로세스·스레드·GIL·메모리·잠금 비교</li><li>네트워크 35분: 요청 경로·timeout·중복 재시도 추적</li><li>데이터베이스 35분: 인덱스 선택·SQL·동시 갱신 설명</li><li>분산 시스템 30분: 큐 재전달·멱등성·캐시·부분 실패 정리</li><li>마지막 20분: 답변을 가리고 원리 → 조건 → 예시 → 한계 순서로 말하기</li></ol><p>공개된 CS 요구 역량에 맞춘 연습입니다. 실제 면접 기출이나 출제 빈도를 뜻하지 않습니다.</p></details></section>`;
 }
 
 function renderHome() {
@@ -254,10 +255,11 @@ function renderMissing() {
 function renderRoute() {
   if (!data) return;
   saveScroll(); const previousRoute = route; route = parseRoute();
+  if (route.type === 'interview' && qaActiveBank !== route.bank) { qaQuery=''; qaLevel='all'; qaFocus=false; qaActiveBank=route.bank; }
   if (route.type !== 'reader') tocMode = 'all'; else if (previousRoute.type !== 'reader' || previousRoute.chapterId !== route.chapterId) tocMode = 'chapter';
   scrollLocked = true;
-  app.innerHTML = route.type === 'reader' ? renderReader() : route.type === 'review' ? renderReview() : route.type === 'interview' ? `${header()}${renderInterviewPage(interviewBank, interviewOptions())}${bottomBar()}` : route.type === 'missing' ? renderMissing() : renderHome();
-  document.title = route.type === 'reader' ? `${sectionMap.get(keyOf(route.chapterId, route.sectionId)).section.title} · AI 개념서` : route.type === 'review' ? '복습 노트 · AI 개념서' : route.type === 'interview' ? 'CS 심화 면접 100문항 · AI 개념서' : 'AI 개념서';
+  app.innerHTML = route.type === 'reader' ? renderReader() : route.type === 'review' ? renderReview() : route.type === 'interview' ? `${header()}${renderInterviewPage(currentInterviewBank(), interviewOptions())}${bottomBar()}` : route.type === 'missing' ? renderMissing() : renderHome();
+  document.title = route.type === 'reader' ? `${sectionMap.get(keyOf(route.chapterId, route.sectionId)).section.title} · AI 개념서` : route.type === 'review' ? '복습 노트 · AI 개념서' : route.type === 'interview' ? `${route.bank === 'basic' ? 'CS·ML/DL 기초' : 'CS 심화'} 면접 100문항 · AI 개념서` : 'AI 개념서';
   decorateProse();
   const y = pendingScroll ?? 0; pendingScroll = null;
   requestAnimationFrame(() => requestAnimationFrame(() => {
@@ -267,12 +269,13 @@ function renderRoute() {
     if (route.type === 'reader') { progress.lastRead = { chapterId: route.chapterId, sectionId: route.sectionId, scrollY: Math.max(0, window.scrollY) }; persist(); }
   }));
 }
+function currentInterviewBank() { return route.bank === 'basic' ? basicInterviewBank : interviewBank; }
 function interviewOptions() { return { topic: route.topic || 'all', query: qaQuery, level: qaLevel, focus: qaFocus }; }
-function decorateInterview() { app.querySelectorAll('.qa-answer,.qa-follow').forEach(node => emphasizeProse(node, 'cs', '')); }
+function decorateInterview() { app.querySelectorAll('.qa-answer,.qa-follow').forEach(node => emphasizeProse(node, node.closest('.qa-card')?.dataset.topic.startsWith('L') ? 'ml' : 'cs', '')); }
 function refreshInterview() {
   if (route.type !== 'interview') return;
-  app.querySelector('#qa-list').innerHTML = renderInterviewCards(interviewBank, interviewOptions());
-  app.querySelector('#qa-result-count').textContent = `${filterInterview(interviewBank, interviewOptions()).length} / 100문항`;
+  app.querySelector('#qa-list').innerHTML = renderInterviewCards(currentInterviewBank(), interviewOptions());
+  app.querySelector('#qa-result-count').textContent = `${filterInterview(currentInterviewBank(), interviewOptions()).length} / 100문항`;
   decorateInterview();
 }
 function decorateProse() {
@@ -430,9 +433,10 @@ async function boot() {
     const response = await fetch(new URL('./data.json', document.baseURI));
     if (!response.ok) throw new Error(`자료를 불러오지 못했습니다 (${response.status}).`);
     data = await response.json();
-    const qaResponse = await fetch(new URL('./interview-qa.json', document.baseURI));
-    if (!qaResponse.ok) throw new Error('면접 자료를 불러오지 못했습니다. 새로고침해 주세요.');
+    const [qaResponse,basicResponse] = await Promise.all([fetch(new URL('./interview-qa.json', document.baseURI)),fetch(new URL('./interview-basic.json', document.baseURI))]);
+    if (!qaResponse.ok || !basicResponse.ok) throw new Error('면접 자료를 불러오지 못했습니다. 새로고침해 주세요.');
     interviewBank = validateInterviewBank(await qaResponse.json());
+    basicInterviewBank = validateInterviewBank(await basicResponse.json());
     if (!Array.isArray(data.chapters) || !data.chapters.length) throw new Error('단원 데이터 형식이 올바르지 않습니다.');
     chapterMap = new Map(); sectionMap = new Map(); orderedSections = [];
     for (const chapter of data.chapters) {
