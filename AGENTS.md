@@ -126,3 +126,20 @@ after stripping private source links. Final source sync uses the complete
   and the ML/DL filters in the live reader before reporting completion.
 - Validation: 16 tests pass, including basic/advanced bank separation, IDs,
   all answered follow-ups, topic links and existing reader routes.
+
+## Concept explanations for every interview answer (2026-11-17 KST)
+- User now requests every answer's format, depth and terminology to follow
+  boost-devs/ai-tech-interview. This supersedes the prior instruction to leave
+  the advanced bank unchanged for this editing task.
+- Both 100-question banks use answerFormat=concept-explanation-v1.
+- Preserve IDs, counts, topic routes, editorial difficulty and focus selections.
+  Advanced prompts are concept questions; their original scenarios are preserved.
+- Every explanation has introduction, at least two defined terms, worked example
+  and primary references. Optional tables, formulas and code add useful detail.
+- Render paragraphs and semantic definition lists instead of three-item summaries.
+  Search includes all explanatory content and original scenarios.
+- Every follow-up includes the original conclusion and an added explanatory
+  paragraph. Do not revert to brief answer-only bullets.
+- content/interview-guidelines.md records the editorial and terminology standard.
+- No textbook source or docs/data.json changes are intended. Keep that large blob
+  out of connector arguments; publish only changed source and matching small assets.

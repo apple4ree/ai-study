@@ -55,6 +55,13 @@ npm run preview
 
 ## 사용한 오픈소스
 
+면접 Q&A는 기초 100문항과 CS 심화 100문항 모두 개념·용어 정의, 원리, 예시,
+꼬리질문 해설과 문항별 참고자료를 제공합니다. 비교 표·관계식·코드는 필요한
+문항에 포함했습니다. 답변 구성은
+[boost-devs/ai-tech-interview](https://github.com/boost-devs/ai-tech-interview)를
+참고해 독립적으로 작성했으며 공식 문서·교재를 우선합니다. 편집 기준은
+`content/interview-guidelines.md`에 있습니다.
+
 - [Marked](https://github.com/markedjs/marked) 15.0.12 — MIT, `vendor/marked/LICENSE.md`
 - [KaTeX](https://github.com/KaTeX/KaTeX) 0.16.22 — MIT, `vendor/katex/LICENSE`
 
